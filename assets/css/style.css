@@ -11,10 +11,14 @@
 @import url(./frameworks/bootstrap.css);
 @import url(./frameworks/bootstrap-icons.css);
 
+@import url(./componentes/app.css);
+@import url(./componentes/music-img.css);
+@import url(./componentes/cards.css);
+
 html{
   scroll-behavior: smooth;
 }
 
 body{
-  font-family: '', sans-serif;
+  font-family: 'Inter Tight', 'Inter', sans-serif;
 }
