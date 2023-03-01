@@ -8,4 +8,8 @@
     })
   })
 
+  document.querySelector('.botao-carregar-img').addEventListener('click', () => {
+    document.querySelector('.input-file').click();
+  })
+
 })();

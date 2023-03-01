@@ -1,32 +1,74 @@
 /* Main início */
 .main{
-  
+  min-height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .esquerda{
-  
+  /* background-color: lightblue; */
 }
 
 .direita{
-  
+  /* background-color: lightcyan; */
+}
+
+.esquerda,
+.direita{
+  font-size: 1.25rem;
+  line-height: normal;
+  width: 50%;
+  padding: 5rem;
 }
 
 .main--music-img{
-  
+  background: url(../../img/background/bckg-music-img.png) center / cover no-repeat;
 }
 
 .main--music-txt{
-  
+  background: url(../../img/background/bckg-music-txt.png) center / cover no-repeat;
+}
+
+.main--music-img,
+.main--music-txt{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .main--music-txt p,
 .main--music-img p{
-  
+  font-family: var(--fonte-titulo-app);
+  font-size: var(--size-titulo-app);
+  font-weight: 700;
+}
+
+.divisor{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--bckg-divisor);
+  padding: 1.25rem;
+  border-radius: 50%;
+  font-weight: 800;
+  font-size: 1.875rem;
+}
+
+.divisor span{
+  background-image: linear-gradient(130deg, #87D1CA 10%, #32CCBC 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* Rodapé */
 .rodape{
-  
+  margin-top: 1rem;
+  /* font-size: 1rem; */
 }
 
 .rodape--informacoes--app{

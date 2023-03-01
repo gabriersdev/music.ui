@@ -48,15 +48,15 @@
   </noscript>
 
   <main class="main">
-    <section class="esquerda main--music-img">
+    <a class="esquerda main--music-img">
       <p>music.img</p>
-    </section>
+    </a>
     <span class="divisor">
-      OU
+      <span>OU</span>
     </span>
-    <section class="direita main--music-txt">
+    <a class="direita main--music-txt">
       <p>music.txt</p>
-    </section>
+    </a>
   </main>
   
   <!-- music.img -->
@@ -104,6 +104,27 @@
           <input type="color" class="input-color" name="" id="">
         </div>
         
+        <div class="form-grupo">
+          <label class="label" for="">
+            <span class="label-principal">Label principal</span>
+            <span class="label-informacoes">Label de informações</span>
+          </label>
+          <input placeholder="Placeholder" type="text" class="input-texto" name="" id="" required>
+
+          <label for="" class="label-input-color"><i class="bi bi-palette-fill"></i></label>
+          <input type="color" class="input-color" name="" id="">
+        </div>
+
+        <div class="form-grupo">
+          <label class="label" for="">
+            <span class="label-principal">Label principal</span>
+            <span class="label-informacoes">Label de informações</span>
+          </label>
+          <input placeholder="Placeholder" type="text" class="input-texto" name="" id="" required>
+
+          <label for="" class="label-input-color"><i class="bi bi-palette-fill"></i></label>
+          <input type="color" class="input-color" name="" id="">
+        </div>
         <button type="submit" class="botao botao-proximo">Próximo -></button>
       </form>
     </section>
@@ -136,8 +157,8 @@
             <span class="label-principal">Imagem</span>
             <span class="label-informacoes">Label de informações</span>
           </label>
-          <input type="file" class="input-file" name="" id="" required>
-          <label type="button" class="botao botao-carregar-img"><i class="bi bi-arrow-up-square"></i> Carregar imagem do dispositivo</label>
+          <input type="file" class="input-file" name="" id="" required accept="image/png,image/jpeg">
+          <button type="button" class="botao botao-carregar-img"><i class="bi bi-arrow-up-square"></i> Carregar imagem do dispositivo</button>
         </div>
         
         <button type="submit" class="botao botao-proximo">Próximo -></button>

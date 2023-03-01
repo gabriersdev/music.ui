@@ -1,71 +1,121 @@
 /* Mains de passos/estados do Music.img */
-.main.music-img{
-
+.music-img{
+  background: linear-gradient(153.69deg, #90F7EC80 0%, #32CCBC80 100%);
 }
 
 .informacoes-apresentacao{
-
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .titulo-app{
-
+  font-family: var(--fonte-titulo-app);
+  font-size: var(--size-titulo-app);
+  font-weight: 700;
 }
 
 .descricao-titulo-app{
-
+  color: var(--cor-txt-descricao-titulo-app);
+  font-size: 2rem;
+  font-weight: 600;
+  padding-top: 1.25rem;
+  padding-bottom: 2rem;
 }
 
 .botao{
+  background-color: var(--bckg-botao-music-img);
+  color: var(--cor-txt-botao-music-img);
+  font-size: 1.25rem;
+  padding: 1rem;
+  width: 100%;
+  border: 1px solid transparent;
+  border-radius: 50px;
+  transition: background 0.3s ease-in-out;
+}
 
+.botao:focus,
+.botao:hover{
+  background-color: #69CAC1;
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .botao-comecar{
 
 }
 
-.exemplo-apresentacao{
-
+.exemplo-apresentacao, .gerando-card{
+  background: rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .dados-geracao-card{
-
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
-.titulo-secao{
-
+.titulo-secao, 
+.titulo-destaque{
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--cor-titulo-secao);
 }
 
 .formulario{
-
+  margin-top: 1rem;
 }
 
 /* Grupo de formulário */
 .form-grupo{
-
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  position: relative;
 }
 
 .label{
-
+  margin-bottom: 1rem;
 }
 
 .label .label-principal{
-
+  display: block;
+  font-weight: 600;
 }
 
 .label .label-informacoes{
-
+  display: block;
+  font-size: 1rem;
 }
 
 .input-texto{
+  display: block;
+  background-color: var(--bckg-input);
+  padding: 0.75rem;
+  border: 0.25rem solid var(--border-input);
+  border-radius: 5px;
+  width: 100%;
+}
 
+.input-texto::placeholder{
+  color: var(--txt-placeholder-input);
 }
 
 .label-input-color{
-
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
 }
 
 .input-color{
-
+  position: absolute;
+  opacity: 0;
 }
 
 .botao-proximo{
@@ -73,10 +123,10 @@
 }
 
 .input-file{
-
+  display: none;
 }
 
-.botao-carregar-imt{
+.botao-carregar-img{
 
 }
 
@@ -90,7 +140,10 @@
 }
 
 .div-grupo{
-
+  padding-top: 2rem;
+  padding-bottom: 2.25rem;
+  position: relative;
+  border-bottom: 1px dashed #000;
 }
 
 .botao-baixar{
@@ -98,9 +151,10 @@
 }
 
 .titulo-destaque{
-
+  margin-bottom: 0.75rem;
 }
 
 .botao-portfolio{
-
+  display: block;
+  text-align: center;
 }

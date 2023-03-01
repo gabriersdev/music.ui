@@ -1,0 +1,22 @@
+:root{
+  --branco: #FFF;
+  --verde: #87D1CA;
+  --verde-medio: #1F8378;
+  --verde-escuro: #145049;
+
+  --fonte-titulo-app: 'Sora', 'Inter', sans-serif;
+  --size-titulo-app: 3.75rem;
+
+  --bckg-divisor: var(--branco);
+
+  --bckg-botao-music-img: var(--verde);
+  --cor-txt-botao-music-img: var(--verde-escuro);
+
+  --cor-txt-descricao-titulo-app: var(--verde-medio);
+
+  --cor-titulo-secao: var(--verde-escuro);
+
+  --bckg-input: var(--verde); 
+  --txt-placeholder-input: var(--verde-escuro);
+  --border-input: var(--verde);
+}
