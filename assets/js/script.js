@@ -26,8 +26,8 @@ import { isEmpty } from './módulos/utilitarios.js';
         //Verificar tipo de arquivos PNG ou JPG
         image_lida.readAsDataURL(imagem);
         
-        //Atualizar nome do botão...
-        //Atualizar tamanho do arquivo...
+        //Atualizar tamanho do arquivo
+        atualizarTamanhoArquivo(imagem.size);
         
         image_lida.addEventListener('loadend', function(evento){
           document.querySelectorAll('.imagem').forEach(imagem => {
@@ -48,6 +48,15 @@ import { isEmpty } from './módulos/utilitarios.js';
     
   });
   
+  function atualizarTamanhoArquivo(tamanho){
+    const txt = document.querySelector('[data-info="tamanho-arquivo"]');
+    if(!isEmpty(tamanho)){
+      txt.textContent = `${(tamanho / 1024 / 1024).toFixed(2)}MB`;
+    }else{
+      txt.textContent = 'Undefined';
+    }
+  }
+
   function tipoValido(arquivo){
     const tipo = arquivo.type.toString().split('/')[1].toLowerCase();
     return tipo == 'png' || tipo == 'jpg';
@@ -120,13 +129,13 @@ import { isEmpty } from './módulos/utilitarios.js';
     
     if(tipo == 'textos'){
       secoes.forEach(secao => {
-        secao.querySelector(`[data-info=${dataset.toLowerCase()}]`).textContent = valor;
+        secao.querySelector(`[data-info=${dataset.toLowerCase()}]`).textContent = valor.trim();
       })
     }
     
     else if(tipo == 'cores'){
       secoes.forEach(secao => {
-        secao.querySelector(`[data-info=${dataset.toLowerCase()}]`).style.color = valor;
+        secao.querySelector(`[data-info=${dataset.toLowerCase()}]`).style.color = valor.trim();
       })
     }
   }

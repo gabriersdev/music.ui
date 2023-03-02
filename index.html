@@ -119,7 +119,7 @@
             <span class="label-informacoes">Texto opcional. Até 20 caracteres.</span>
           </label>
           <div class="input-grupo">
-            <input placeholder="Autor da música" type="text" class="input-texto" data-input="autor" name="" id="" required maxlength="20">
+            <input placeholder="Autor da música" type="text" class="input-texto" data-input="autor" name="" id="" maxlength="20">
           </div>
           
           <label for="" class="label-input-color"><i class="bi bi-palette-fill"></i></label>
@@ -132,7 +132,7 @@
             <span class="label-informacoes">Texto opcional. Até 20 caracteres.</span>
           </label>
           <div class="input-grupo">
-            <input placeholder="Nome da música" type="text" class="input-texto" data-input="nome" name="" id="" required maxlength="20">
+            <input placeholder="Nome da música" type="text" class="input-texto" data-input="nome" name="" id="" maxlength="20">
           </div>
           
           <label for="" class="label-input-color"><i class="bi bi-palette-fill"></i></label>
@@ -207,7 +207,7 @@
         <div class="div-grupo">
           <div class="label" for="">
             <span class="label-principal">Card de [Nome música] - [Nome autor]</span>
-            <span class="label-informacoes">Tamanho aproximado: 2MB</span>
+            <span class="label-informacoes">Tamanho aproximado: <span data-info="tamanho-arquivo">2MB</span></span>
           </div>
           <a href="" download="download.png" data-acao="download-capture"></a>
           <button type="button" class="botao botao-baixar">Baixar <i class="bi bi-arrow-down-square"></i></button>
@@ -238,8 +238,8 @@
             O verso da música aparecerá aqui
           </p>
           <p class="card--informacoes--autoria">
-            <span class="autor" data-info="autor">Autor</span>
-            <span class="nome-musica" data-info="nome">Nome da música</span>
+            <span class="autor" data-info="autor"></span>
+            <span class="nome-musica" data-info="nome"></span>
           </p>
         </div>
       </div>
