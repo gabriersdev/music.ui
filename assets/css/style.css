@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&display=swap');
 
 @import url(./frameworks/bootstrap.css);
 @import url(./frameworks/bootstrap-icons.css);
@@ -13,8 +13,8 @@
 @import url(./reset.css);
 
 @import url(./componentes/app.css);
-@import url(./componentes/music-img.css);
 @import url(./componentes/cards.css);
+@import url(./componentes/music-img.css);
 
 html{
   scroll-behavior: smooth;

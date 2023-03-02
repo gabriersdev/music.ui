@@ -1,26 +1,49 @@
 /* Card de música */
 .card{
-
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  min-height: 600px;
+  border: unset;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
 .card--logo-app{
-
+  font-family: var(--fonte-titulo-app);
+  font-weight: 800;
+  color: rgba(0, 0, 0, 0.5);
 }
 
 .card--informacoes{
-
+  color: #FFF;
+  text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
 }
 
 .card--informacoes--versos{
-
+  font-family: 'Inter Tight', 'Inter', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+  margin-bottom: 2rem;
 }
 
 .card--informacoes--autoria{
-
+  font-size: 1.5rem;
+  font-weight: 600;
 }
 
 .card--informacoes--autoria .autor{
+  text-transform: uppercase;
+}
 
+.card--informacoes--autoria .autor::after{
+  content: " - ";
 }
 
 .card--informacoes--autoria .nome-musica{
