@@ -18,4 +18,17 @@
     })
   })
 
+  const download_capture = document.querySelector('a[data-acao="download-capture"]');
+
+  html2canvas(document.querySelector("#capture")).then(canvas => {
+    const img = canvas;
+    download_capture.href = img.toDataURL('image/png').replace("image/png", "image/octet-stream");
+  });
+
+  document.querySelector('.botao-baixar').addEventListener('click', () => {
+    if(download_capture.href !== null){
+      download_capture.click();
+    }
+  })
+
 })();
