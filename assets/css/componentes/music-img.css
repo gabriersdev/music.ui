@@ -70,7 +70,11 @@
 }
 
 .formulario{
+  height: 90%;
   margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 /* Grupo de formulário */
@@ -94,13 +98,17 @@
   font-size: 1rem;
 }
 
+.input-grupo{
+  background-color: var(--bckg-input);
+  border-radius: 5px;
+}
+
 .input-texto{
   display: block;
-  background-color: var(--bckg-input);
   padding: 0.75rem;
   border: 0.25rem solid var(--border-input);
   border-radius: 5px;
-  width: 100%;
+  width: calc(100% - 3rem);
   transition: border-color 0.2s ease-in-out;
 }
 

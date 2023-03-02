@@ -21,7 +21,7 @@ a{
   text-decoration: none;
 }
 
-a, button, input{
+a, button, input, textarea{
   color: inherit;
   outline: none;
   background-color: unset;
