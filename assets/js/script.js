@@ -1,4 +1,6 @@
-// "use strict";
+"use strict";
+
+import { isEmpty } from './módulos/utilitarios.js';
 
 (() => {
   
@@ -11,20 +13,30 @@
   document.querySelector('.botao-carregar-img').addEventListener('click', () => {
     document.querySelector('.input-file').click();
   })
-
+  
   const input_file = document.querySelector('.input-file');
   input_file.addEventListener('change', function(){
     const imagem = input_file.files[0];
-
+    //Verificar se a imagem foi definida
+    
     const image_lida = new FileReader();
-    image_lida.readAsDataURL(imagem);
+    
+    if(!isEmpty(imagem)){
+      //Verificar tipo de arquivos PNG ou JPG
 
-    image_lida.addEventListener('loadend', function(evento){
-      document.querySelector('#testeIMG').src = evento.target.result;
-    })
-
-    //Verificar tipo de arquivos PNG ou JPG
-
+      image_lida.readAsDataURL(imagem);
+      
+      //Atualizar nome do botão...
+      //Atualizar tamanho do arquivo...
+      
+      image_lida.addEventListener('loadend', function(evento){
+        document.querySelectorAll('.imagem').forEach(imagem => {
+          imagem.src = evento.target.result
+          imagem.classList.value = 'imagem';
+        });
+      }) 
+    }
+    
   });
   
   document.querySelectorAll('form.formulario').forEach(form => {
@@ -32,15 +44,19 @@
       input.addEventListener('input', () => {
         switch(input.classList.value){
           case 'input-color':
-            atualizarCores(input);
+          atualizarCores(input);
           break;
-
+          
           case 'input-texto':
-            atualizarTextos(input);
+          atualizarTextos(input);
+          break;
+          
+          case 'input-file':
+          //
           break;
 
           default:
-            console.log('Há um erro na atribuição de classe para este elemento.');
+          console.log('Há um erro na atribuição de classe para este elemento.');
           break;
         }
       })
@@ -57,43 +73,43 @@
       case 'verso':        
       case 'autor':
       case 'nome':
-        atualizarTodosCardsGeracao(valor, datasetInputTexto, input.closest('form'), 'cores');
+      atualizarTodosCardsGeracao(valor, datasetInputTexto, input.closest('form'), 'cores');
       break;
-
+      
       default:
-        console.log('Há um erro na filtragem do dataset classe para este elemento.');
+      console.log('Há um erro na filtragem do dataset classe para este elemento.');
       break;
     }
   }
-
+  
   function atualizarTextos(input){
     //!isEmpty
     const dataset = input.dataset.input.toLowerCase();
     const valor = input.value;
-
+    
     switch(dataset){
       case 'verso':        
       case 'autor':
       case 'nome':
-        atualizarTodosCardsGeracao(valor, dataset, input.closest('form'), 'textos');
+      atualizarTodosCardsGeracao(valor, dataset, input.closest('form'), 'textos');
       break;
-
+      
       default:
-        console.log('Há um erro na filtragem do dataset classe para este elemento.');
+      console.log('Há um erro na filtragem do dataset classe para este elemento.');
       break;
     }
   }
-
+  
   function atualizarTodosCardsGeracao(valor, dataset, formulario, tipo){
     const secoes = formulario.closest('body').querySelectorAll('section.gerando-card');
     tipo = tipo.toLowerCase();
-
+    
     if(tipo == 'textos'){
       secoes.forEach(secao => {
         secao.querySelector(`[data-info=${dataset.toLowerCase()}]`).textContent = valor;
       })
     }
-
+    
     else if(tipo == 'cores'){
       secoes.forEach(secao => {
         secao.querySelector(`[data-info=${dataset.toLowerCase()}]`).style.color = valor;

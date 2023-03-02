@@ -18,20 +18,46 @@
   border: unset;
   padding: 1.5rem;
   box-sizing: border-box;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
+  position: relative;
+  /* display: flex; */
+  /* justify-content: space-between; */
+  /* flex-direction: column; */
+}
+
+.card .imagem{
+  border: unset;
+  border-radius: inherit;
+  width: 500px;
+  height: 600px;
+  top: 0;
+  left: 0;
+  /* z-index: 0; */
+  position: absolute;
+}
+
+.card .imagem.hidden{
+  visibility: hidden;
 }
 
 .card--logo-app{
   font-family: var(--fonte-titulo-app);
   font-weight: 800;
   color: rgba(0, 0, 0, 0.5);
+  /* z-index: 1; */
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
 }
 
 .card--informacoes{
   color: #FFF;
   text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+  /* z-index: 2; */
+  width: calc(inherit - 1.5rem);
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  left: 1.5rem;
 }
 
 .card--informacoes--versos{
