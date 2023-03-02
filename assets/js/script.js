@@ -17,12 +17,11 @@
       input.addEventListener('input', () => {
         switch(input.classList.value){
           case 'input-color':
-            input.parentElement.querySelector('label.label-input-color').style.color = input.value.toUpperCase();
+            atualizarCores(input);
           break;
 
           case 'input-texto':
-            const dataset = input.dataset.input;
-            atualizarTextos(input.value, dataset, input.closest('form'));
+            atualizarTextos(input);
           break;
 
           default:
@@ -33,24 +32,56 @@
     })
   })
   
-  function atualizarTextos(valor, dataset, formulario){
-    //!isEmpty
-    switch(dataset.toLowerCase()){
+  function atualizarCores(input){
+    //Atualiza a cor do ícone (label) do input:color
+    const valor = input.value.toUpperCase()
+    input.parentElement.querySelector('label.label-input-color').style.color = valor;
+    const datasetInputTexto = input.parentElement.querySelector('input.input-texto').dataset.input;
+    
+    switch(datasetInputTexto){
       case 'verso':        
       case 'autor':
       case 'nome':
-        atualizarTodosCardsGeracao(valor, dataset);
+        atualizarTodosCardsGeracao(valor, datasetInputTexto, input.closest('form'), 'cores');
       break;
 
       default:
         console.log('Há um erro na filtragem do dataset classe para este elemento.');
       break;
     }
+  }
 
-    function atualizarTodosCardsGeracao(valor, dataset){
-      const secoes = formulario.closest('body').querySelectorAll('section.gerando-card');
+  function atualizarTextos(input){
+    //!isEmpty
+    const dataset = input.dataset.input.toLowerCase();
+    const valor = input.value;
+
+    switch(dataset){
+      case 'verso':        
+      case 'autor':
+      case 'nome':
+        atualizarTodosCardsGeracao(valor, dataset, input.closest('form'), 'textos');
+      break;
+
+      default:
+        console.log('Há um erro na filtragem do dataset classe para este elemento.');
+      break;
+    }
+  }
+
+  function atualizarTodosCardsGeracao(valor, dataset, formulario, tipo){
+    const secoes = formulario.closest('body').querySelectorAll('section.gerando-card');
+    tipo = tipo.toLowerCase();
+
+    if(tipo == 'textos'){
       secoes.forEach(secao => {
-        secao.querySelector(`[data-info=${dataset}]`).textContent = valor;
+        secao.querySelector(`[data-info=${dataset.toLowerCase()}]`).textContent = valor;
+      })
+    }
+
+    else if(tipo == 'cores'){
+      secoes.forEach(secao => {
+        secao.querySelector(`[data-info=${dataset.toLowerCase()}]`).style.color = valor;
       })
     }
   }
