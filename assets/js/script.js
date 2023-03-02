@@ -1,6 +1,6 @@
 "use strict";
 
-import { isEmpty } from './módulos/utilitarios.js';
+import { capitalize, isEmpty } from './módulos/utilitarios.js';
 
 (() => {
   
@@ -47,11 +47,31 @@ import { isEmpty } from './módulos/utilitarios.js';
     }
     
   });
-  
+
+  function atualizarNomeArquivo(){
+    const nome = capitalize(document.querySelector('[data-input="nome"]').value.trim());
+    const autor = capitalize(document.querySelector('[data-input="autor"]').value.trim());
+    const aps = document.querySelector('[data-info="nome-apresentacao"]');
+    const a = document.querySelector('[data-acao="download-capture"]');
+
+    let nome_arquivo = 'Card';
+
+    if(!isEmpty(nome) && !isEmpty(autor)){
+      nome_arquivo = `Card de ${nome} - ${autor}`;
+    }
+
+    else if(!isEmpty(nome)){
+      nome_arquivo = `Card de ${nome}`
+    }
+
+    aps.textContent = `${nome_arquivo}`;
+    a.setAttribute('download', `${nome_arquivo} - music.ui.png`);
+  }
+
   function atualizarTamanhoArquivo(tamanho){
     const txt = document.querySelector('[data-info="tamanho-arquivo"]');
     if(!isEmpty(tamanho)){
-      txt.textContent = `${(tamanho / 1024 / 1024).toFixed(2)}MB`;
+      txt.textContent = `${(tamanho / 1024 / 1024 * 4.5).toFixed(2)}MB`;
     }else{
       txt.textContent = 'Undefined';
     }
@@ -115,6 +135,7 @@ import { isEmpty } from './módulos/utilitarios.js';
       case 'autor':
       case 'nome':
       atualizarTodosCardsGeracao(valor, dataset, input.closest('form'), 'textos');
+      atualizarNomeArquivo();
       break;
       
       default:

@@ -8,6 +8,11 @@ const isEmpty = (valor) => {
   }
 }
 
+const capitalize = (valor) => {
+  return valor.charAt(0).toUpperCase() + valor.substr(1, valor.length).toLowerCase();
+}
+
 export{
-  isEmpty
+  isEmpty,
+  capitalize
 }
