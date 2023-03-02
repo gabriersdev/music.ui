@@ -21,30 +21,33 @@ import { isEmpty } from './módulos/utilitarios.js';
     
     const image_lida = new FileReader();
     
-    if(!isEmpty(imagem) && tipoValido(imagem)){
-      //Verificar tipo de arquivos PNG ou JPG
-
-      image_lida.readAsDataURL(imagem);
+    if(!isEmpty(imagem)){
+      if(tipoValido(imagem)){
+        //Verificar tipo de arquivos PNG ou JPG
+        image_lida.readAsDataURL(imagem);
+        
+        //Atualizar nome do botão...
+        //Atualizar tamanho do arquivo...
+        
+        image_lida.addEventListener('loadend', function(evento){
+          document.querySelectorAll('.imagem').forEach(imagem => {
+            imagem.src = evento.target.result
+            imagem.classList.value = 'imagem';
+          });
+        }) 
+      }
       
-      //Atualizar nome do botão...
-      //Atualizar tamanho do arquivo...
-      
-      image_lida.addEventListener('loadend', function(evento){
-        document.querySelectorAll('.imagem').forEach(imagem => {
-          imagem.src = evento.target.result
-          imagem.classList.value = 'imagem';
-        });
-      }) 
-    }else{
-      Swal.fire({
-        icon: 'error',
-        title: 'Arquivo inválido',
-        text: 'O formato do arquivo não é uma imagem PNG ou JPG ou está corrompido.'
-      })
+      else{
+        Swal.fire({
+          icon: 'error',
+          title: 'Arquivo inválido',
+          text: 'O formato do arquivo não é uma imagem (nos formatos PNG ou JPG) ou está corrompido.'
+        })
+      }
     }
     
   });
-
+  
   function tipoValido(arquivo){
     const tipo = arquivo.type.toString().split('/')[1].toLowerCase();
     return tipo == 'png' || tipo == 'jpg';
@@ -65,7 +68,7 @@ import { isEmpty } from './módulos/utilitarios.js';
           case 'input-file':
           //
           break;
-
+          
           default:
           console.log('Há um erro na atribuição de classe para este elemento.');
           break;
