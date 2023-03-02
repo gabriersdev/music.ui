@@ -1,7 +1,16 @@
 /* Card de música */
+.efeito{
+  display: block;
+  height: 100%;
+  width: 100%;
+  backdrop-filter: blur(20px);
+  position: absolute;
+}
+
 .card{
   background-color: rgba(0, 0, 0, 0.2);
   border-radius: 15px;
+  border: unset;
   min-height: 600px;
   border: unset;
   padding: 1.5rem;

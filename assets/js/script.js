@@ -19,16 +19,16 @@
   })
 
   const download_capture = document.querySelector('a[data-acao="download-capture"]');
-
-  html2canvas(document.querySelector("#capture")).then(canvas => {
-    const img = canvas;
-    download_capture.href = img.toDataURL('image/png').replace("image/png", "image/octet-stream");
-  });
+  const card = document.querySelector('#capture');
 
   document.querySelector('.botao-baixar').addEventListener('click', () => {
-    if(download_capture.href !== null){
+    card.style.borderRadius = '0';
+    html2canvas(card).then(canvas => {
+      const img = canvas;
+      download_capture.href = img.toDataURL('image/png').replace("image/png", "image/octet-stream");
       download_capture.click();
-    }
+    });
+    card.style.borderRadius = '15px';
   })
 
 })();

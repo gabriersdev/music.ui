@@ -29,7 +29,7 @@
   <script src="./assets/js/frameworks/pooper.js" defer></script>
   <script src="./assets/js/frameworks/sweet-alert.js" defer></script>
   <script src="./assets/js/frameworks/html2canvas.min.js" defer></script>
-  <script src="./assets/js/script.js" defer></script>
+  <script type="module" src="./assets/js/script.js" defer></script>
 </head>
 <body>
 
@@ -72,7 +72,7 @@
 
     <section class="direita exemplo-apresentacao">
       <span class="efeito"></span>
-      <div class="card">
+      <div class="card" id="capture">
         <span class="card--logo-app">music.img</span>
         <div class="card--informacoes">
           <p class="card--informacoes--versos">
@@ -214,7 +214,7 @@
       </footer>
     </section>
 
-    <section class="direita gerando-card" id="capture">
+    <section class="direita gerando-card">
       <div class="card">
         <span class="card--logo-app">music.img</span>
         <div class="card--informacoes">
