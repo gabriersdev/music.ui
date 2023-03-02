@@ -19,4 +19,5 @@
   --bckg-input: var(--verde); 
   --txt-placeholder-input: var(--verde-escuro);
   --border-input: var(--verde);
+  --border-input-focus: var(--verde-medio);
 }

@@ -1,4 +1,4 @@
-"use strict";
+// "use strict";
 
 (() => {
   
@@ -10,6 +10,12 @@
 
   document.querySelector('.botao-carregar-img').addEventListener('click', () => {
     document.querySelector('.input-file').click();
+  })
+
+  document.querySelectorAll('.input-color').forEach(input => {
+    input.addEventListener('input', () => {
+      input.parentElement.querySelector('label.label-input-color').style.color = input.value.toUpperCase();
+    })
   })
 
 })();
