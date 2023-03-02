@@ -21,7 +21,7 @@ import { isEmpty } from './módulos/utilitarios.js';
     
     const image_lida = new FileReader();
     
-    if(!isEmpty(imagem)){
+    if(!isEmpty(imagem) && tipoValido(imagem)){
       //Verificar tipo de arquivos PNG ou JPG
 
       image_lida.readAsDataURL(imagem);
@@ -35,9 +35,20 @@ import { isEmpty } from './módulos/utilitarios.js';
           imagem.classList.value = 'imagem';
         });
       }) 
+    }else{
+      Swal.fire({
+        icon: 'error',
+        title: 'Arquivo inválido',
+        text: 'O formato do arquivo não é uma imagem PNG ou JPG ou está corrompido.'
+      })
     }
     
   });
+
+  function tipoValido(arquivo){
+    const tipo = arquivo.type.toString().split('/')[1].toLowerCase();
+    return tipo == 'png' || tipo == 'jpg';
+  }
   
   document.querySelectorAll('form.formulario').forEach(form => {
     form.querySelectorAll('input').forEach(input => {
