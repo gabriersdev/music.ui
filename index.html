@@ -100,7 +100,7 @@
             <span class="label-informacoes">Texto obrigatório. Até 50 caracteres.</span>
           </label>
           <div class="input-grupo">
-            <input placeholder="Verso da música" type="text" class="input-texto" name="" id="" required maxlength="50">
+            <input placeholder="Verso da música" type="text" class="input-texto" data-input="verso" name="" id="" required maxlength="50">
           </div>
 
           <label for="" class="label-input-color"><i class="bi bi-palette-fill"></i></label>
@@ -110,10 +110,10 @@
         <div class="form-grupo">
           <label class="label" for="">
             <span class="label-principal">Autor da música</span>
-            <span class="label-informacoes">Texto opcional. Até 15 caracteres</span>
+            <span class="label-informacoes">Texto opcional. Até 20 caracteres.</span>
           </label>
           <div class="input-grupo">
-            <input placeholder="Autor da música" type="text" class="input-texto" name="" id="" required maxlength="15">
+            <input placeholder="Autor da música" type="text" class="input-texto" data-input="autor" name="" id="" required maxlength="20">
           </div>
 
           <label for="" class="label-input-color"><i class="bi bi-palette-fill"></i></label>
@@ -123,10 +123,10 @@
         <div class="form-grupo">
           <label class="label" for="">
             <span class="label-principal">Nome da música</span>
-            <span class="label-informacoes">Texto opcional. Até 15 caracteres</span>
+            <span class="label-informacoes">Texto opcional. Até 20 caracteres.</span>
           </label>
           <div class="input-grupo">
-            <input placeholder="Nome da música" type="text" class="input-texto" name="" id="" required maxlength="15">
+            <input placeholder="Nome da música" type="text" class="input-texto" data-input="nome" name="" id="" required maxlength="20">
           </div>
 
           <label for="" class="label-input-color"><i class="bi bi-palette-fill"></i></label>
@@ -140,12 +140,12 @@
       <div class="card">
         <span class="card--logo-app">music.img</span>
         <div class="card--informacoes">
-          <p class="card--informacoes--versos">
+          <p class="card--informacoes--versos" data-info="verso">
             O verso da música aparecerá aqui
           </p>
           <p class="card--informacoes--autoria">
-            <span class="autor">Autor</span>
-            <span class="nome-musica">Nome da música</span>
+            <span class="autor" data-info="autor">Autor</span>
+            <span class="nome-musica" data-info="nome">Nome da música</span>
           </p>
         </div>
       </div>
@@ -176,12 +176,12 @@
       <div class="card">
         <span class="card--logo-app">music.img</span>
         <div class="card--informacoes">
-          <p class="card--informacoes--versos">
+          <p class="card--informacoes--versos" data-info="verso">
             O verso da música aparecerá aqui
           </p>
           <p class="card--informacoes--autoria">
-            <span class="autor">Autor</span>
-            <span class="nome-musica">Nome da música</span>
+            <span class="autor" data-info="autor">Autor</span>
+            <span class="nome-musica" data-info="nome">Nome da música</span>
           </p>
         </div>
       </div>
@@ -224,12 +224,12 @@
       <div class="card">
         <span class="card--logo-app">music.img</span>
         <div class="card--informacoes">
-          <p class="card--informacoes--versos">
+          <p class="card--informacoes--versos" data-info="verso">
             O verso da música aparecerá aqui
           </p>
           <p class="card--informacoes--autoria">
-            <span class="autor">Autor</span>
-            <span class="nome-musica">Nome da música</span>
+            <span class="autor" data-info="autor">Autor</span>
+            <span class="nome-musica" data-info="nome">Nome da música</span>
           </p>
         </div>
       </div>
