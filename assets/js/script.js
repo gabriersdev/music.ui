@@ -11,6 +11,21 @@
   document.querySelector('.botao-carregar-img').addEventListener('click', () => {
     document.querySelector('.input-file').click();
   })
+
+  const input_file = document.querySelector('.input-file');
+  input_file.addEventListener('change', function(){
+    const imagem = input_file.files[0];
+
+    const image_lida = new FileReader();
+    image_lida.readAsDataURL(imagem);
+
+    image_lida.addEventListener('loadend', function(evento){
+      document.querySelector('#testeIMG').src = evento.target.result;
+    })
+
+    //Verificar tipo de arquivos PNG ou JPG
+
+  });
   
   document.querySelectorAll('form.formulario').forEach(form => {
     form.querySelectorAll('input').forEach(input => {

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  
   <meta name="keywords" content="música, imagem, card, verso, composição">
   <meta name="author" content="Gabriel Ribeiro">
   <meta property="og:title" content="music.ui">
@@ -15,15 +15,15 @@
   <meta property="og:image:type" content="image/png"> 
   <meta property="og:image:width" content="400"> 
   <meta property="og:image:height" content="300">
-
+  
   <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'unsafe-inline'; style-src 'self'; img-src *; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net/; script-src 'self' https://cdn.jsdelivr.net/ https://code.jquery.com/ https://cdnjs.cloudflare.com/; frame-src *">   -->
   
   <link rel="stylesheet" href="./assets/css/style.css">
-
+  
   <link rel="shortcut icon" href="./assets/img/#" type="image/x-icon">
-
+  
   <title>music.ui</title>
-
+  
   <script src="./assets/js/frameworks/bootstrap.js" defer></script>
   <script src="./assets/js/frameworks/jquery.js" defer></script>
   <script src="./assets/js/frameworks/pooper.js" defer></script>
@@ -32,21 +32,27 @@
   <script type="module" src="./assets/js/script.js" defer></script>
 </head>
 <body>
-
+  
   <noscript>
     <div class="box-no-script">         
       <div class="texto-pagina-centralizado-alt">
         <h2 class="titulo-texto-pagina-centralizado">Este site não funciona com o 
-          <span class="destaque-pagina-centralizado">Javascript desabilitado</span></h2><br>
-          
-        <p class="label-texto-pagina-centralizado">Muitos dos recursos usados funcionam através do Javascript e sem ele a navegabilidade e o próprio funcionamento do site são comprometidos</p>
-          
-        <p class="label-texto-pagina-centralizado">Portanto, habilite o Javascript e navegue pelo site</p><br>
+          <span class="destaque-pagina-centralizado">Javascript desabilitado</span>
+        </h2>
+        <br>
+        
+        <p class="label-texto-pagina-centralizado">
+          Muitos dos recursos usados funcionam através do Javascript e sem ele a navegabilidade e o próprio funcionamento do site são comprometidos
+        </p>
+        
+        <p class="label-texto-pagina-centralizado">
+          Portanto, habilite o Javascript e navegue pelo site
+        </p><br>
         <button data-recarrega-pagina class="btn-principal-no-script" id="btn-redirecionar-inicio" name="btn-redirecionar-inicio">Recarregar</button>
       </div>
     </div>
   </noscript>
-
+  
   <main class="main">
     <a class="esquerda main--music-img">
       <p>music.img</p>
@@ -65,11 +71,11 @@
       <h1 class="titulo-app">
         music.img
       </h1>
-
+      
       <p class="descricao-titulo-app">Crie cards com seus versos preferidos das suas músicas favoritas</p>
       <button class="botao botao-comecar">Começar -></button>
     </section>
-
+    
     <section class="direita exemplo-apresentacao">
       <span class="efeito"></span>
       <div class="card" id="capture">
@@ -92,7 +98,7 @@
       <h2 class="titulo-secao">
         Passo 1 de 2
       </h2>
-
+      
       <form action="#" method="POST" class="formulario">
         <div class="form-grupo">
           <label class="label" for="">
@@ -102,7 +108,7 @@
           <div class="input-grupo">
             <input placeholder="Verso da música" type="text" class="input-texto" data-input="verso" name="" id="" required maxlength="50">
           </div>
-
+          
           <label for="" class="label-input-color"><i class="bi bi-palette-fill"></i></label>
           <input type="color" class="input-color" name="" id="">
         </div>
@@ -115,11 +121,11 @@
           <div class="input-grupo">
             <input placeholder="Autor da música" type="text" class="input-texto" data-input="autor" name="" id="" required maxlength="20">
           </div>
-
+          
           <label for="" class="label-input-color"><i class="bi bi-palette-fill"></i></label>
           <input type="color" class="input-color" name="" id="">
         </div>
-
+        
         <div class="form-grupo">
           <label class="label" for="">
             <span class="label-principal">Nome da música</span>
@@ -128,14 +134,14 @@
           <div class="input-grupo">
             <input placeholder="Nome da música" type="text" class="input-texto" data-input="nome" name="" id="" required maxlength="20">
           </div>
-
+          
           <label for="" class="label-input-color"><i class="bi bi-palette-fill"></i></label>
           <input type="color" class="input-color" name="" id="">
         </div>
         <button type="submit" class="botao botao-proximo">Próximo -></button>
       </form>
     </section>
-
+    
     <section class="direita gerando-card">
       <div class="card">
         <span class="card--logo-app">music.img</span>
@@ -151,13 +157,13 @@
       </div>
     </section>
   </main>
-
+  
   <main class="main music-img">
     <section class="esquerda dados-geracao-card">
       <h2 class="titulo-secao">
         Passo 2 de 2
       </h2>
-
+      
       <form action="#" method="POST" class="formulario">
         <div class="form-grupo">
           <label class="label" for="">
@@ -166,12 +172,15 @@
           </label>
           <input type="file" class="input-file" name="" id="" required accept="image/png,image/jpeg">
           <button type="button" class="botao botao-carregar-img"><i class="bi bi-arrow-up-square"></i> Carregar imagem do dispositivo</button>
+
+          <img src="" id="testeIMG" alt="">
+
         </div>
         
         <button type="submit" class="botao botao-proximo">Próximo -></button>
       </form>
     </section>
-
+    
     <section class="direita gerando-card">
       <div class="card">
         <span class="card--logo-app">music.img</span>
@@ -187,13 +196,13 @@
       </div>
     </section>
   </main>
-
+  
   <main class="main music-img">
     <section class="esquerda dados-geracao-card">
       <h2 class="titulo-secao">
         Tudo certo :)
       </h2>
-
+      
       <div class="grupo-encerramento">
         <div class="div-grupo">
           <div class="label" for="">
@@ -204,7 +213,7 @@
           <button type="button" class="botao botao-baixar">Baixar <i class="bi bi-arrow-down-square"></i></button>
         </div>
       </div>
-
+      
       <div class="grupo-encerramento">
         <div class="div-grupo">
           <h2 class="titulo-destaque">
@@ -213,13 +222,13 @@
           <a href="" class="botao botao-portfolio">Ver o portfólio</a>
         </div>
       </div>
-
+      
       <footer class="rodape">
         <p class="rodape--informacoes--app"><i class="bi bi-c-circle"></i> 2023 - <time data-ano-atual>2023</time> music.img</p>
         <address class="rodape--informacoes-dev">Desenvolvido por Gabriel Ribeiro</address>
       </footer>
     </section>
-
+    
     <section class="direita gerando-card">
       <div class="card">
         <span class="card--logo-app">music.img</span>
@@ -235,6 +244,6 @@
       </div>
     </section>
   </main>
-
+  
 </body>
 </html>
