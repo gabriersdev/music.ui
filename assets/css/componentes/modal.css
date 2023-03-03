@@ -1,0 +1,54 @@
+#modal-compartilha .modal-content{
+  border-radius: 10px !important;
+}
+
+#modal-compartilha .modal-body .icone{
+  font-size: 2rem;
+  color: #3632BB;
+}
+
+#modal-compartilha .modal-body h5{
+  color: #3632BB;
+  margin: 0.5rem 0;
+  font-weight: 700;
+}
+
+#modal-compartilha .modal-body input{
+  box-shadow: unset;
+}
+
+#modal-compartilha .modal-body p{
+  margin-top: 5px; 
+  margin-bottom: 2.5px;
+}
+
+#modal-compartilha .feedback-message{
+  display: none;
+  padding: 0.5em;
+  border-radius: 5px;
+  transition: all 400ms;
+  text-align: center;
+}
+
+#modal-compartilha #link-compartilhamento{
+  border: 1px dashed #000 !important;
+}
+
+button#button-addon-link-copy{
+  border: 1px dashed #6C757D !important;
+}
+
+#modal-compartilha .error{
+  color: #000000;
+  background-color: #E8A0A0;
+}
+
+#modal-compartilha .warning{
+  color: #000000;
+  background-color: #E99F3F;
+}
+
+#modal-compartilha .success{
+  color: #000000;
+  background-color: #80DA80;
+}

@@ -24,8 +24,8 @@
   
   <title>music.ui</title>
   
-  <script src="./assets/js/frameworks/bootstrap.js" defer></script>
   <script src="./assets/js/frameworks/jquery.js" defer></script>
+  <script src="./assets/js/frameworks/bootstrap.js" defer></script>
   <script src="./assets/js/frameworks/pooper.js" defer></script>
   <script src="./assets/js/frameworks/sweet-alert.js" defer></script>
   <script src="./assets/js/frameworks/html2canvas.min.js" defer></script>
@@ -252,6 +252,27 @@
       </div>
     </section>
   </main>
+  
+  <div class="modal fade" id="modal-compartilha" tabindex="-1" aria-labelledby="modal-compartilha-label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content modal-estilo">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modal-compartilha-label">Compartilhe</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h5>O download já foi providenciado!</h5>
+          <p>Compartilhe o <b>music.img</b> com seus amigos e conhecidos. É só clicar em no botão "Copiar" abaixo :)</p><br>
+          
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" id="link-compartilhamento" placeholder="Link de Compartilhamento" aria-label="Link de Compartilhamento" aria-describedby="button-addon-link-copy" value="https://gabrieszin.github.io/music-ui/img" readonly>
+            <button class="btn btn-outline-secondary" type="button" id="button-addon-link-copy"><i class="bi bi-clipboard2"></i>&nbsp;Copiar</button>
+          </div>
+          <div class="feedback-message" id="feedback-message"></div>
+        </div>
+      </div>
+    </div>
+  </div>
   
 </body>
 </html>

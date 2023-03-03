@@ -1,6 +1,7 @@
 "use strict";
 
 import { capitalize, isEmpty } from './módulos/utilitarios.js';
+import { escutaClickInteracaoModalCompartilha } from './módulos/modal.js';
 
 (() => {
   
@@ -16,21 +17,18 @@ import { capitalize, isEmpty } from './módulos/utilitarios.js';
   
   const input_file = document.querySelector('.input-file');
   input_file.addEventListener('change', function(){
-    const imagem = input_file.files[0];
-    //Verificar se a imagem foi definida
-    
+    const imagem = input_file.files[0];    
     const image_lida = new FileReader();
     
     if(!isEmpty(imagem)){
       if(tipoValido(imagem)){
         image_lida.readAsDataURL(imagem);
         
-        //Atualizar tamanho do arquivo
         atualizarTamanhoArquivo(imagem.size);
         atualizarNomeArquivo();
         
         image_lida.addEventListener('loadend', function(evento){
-
+          
           exibirFeedbackUploadConcluido(evento.target.result, imagem);
 
           document.querySelectorAll('.imagem').forEach(imagem => {
@@ -182,6 +180,8 @@ import { capitalize, isEmpty } from './módulos/utilitarios.js';
       download_capture.click();
     });
     card.style.borderRadius = '15px';
+    $('#modal-compartilha').modal('show');
   })
   
+  escutaClickInteracaoModalCompartilha();
 })();

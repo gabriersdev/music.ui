@@ -15,6 +15,7 @@
 @import url(./componentes/music-img.css);
 @import url(./componentes/app.css);
 @import url(./componentes/cards.css);
+@import url(./componentes/modal.css);
 
 html{
   scroll-behavior: smooth;
