@@ -1,6 +1,6 @@
 /* Mains de passos/estados do Music.img */
 .music-img{
-  background: linear-gradient(153.69deg, #90F7EC80 0%, #32CCBC80 100%);
+  background: var(--bckg-music-img);
 }
 
 .informacoes-apresentacao{
@@ -19,7 +19,7 @@
 
 .descricao-titulo-app{
   color: var(--cor-txt-descricao-titulo-app);
-  font-size: 2rem;
+  font-size: var(--size-txt-descricao-titulo);
   font-weight: 600;
   padding-top: 1.25rem;
   padding-bottom: 2rem;
@@ -28,7 +28,7 @@
 .botao{
   background-color: var(--bckg-botao-music-img);
   color: var(--cor-txt-botao-music-img);
-  font-size: 1.25rem;
+  font-size: var(--size-txt-botao);
   padding: 1rem;
   width: 100%;
   border: 1px solid transparent;
@@ -63,13 +63,13 @@
 
 .titulo-secao, 
 .titulo-destaque{
-  font-size: 2.5rem;
+  font-size: var(--size-titulo-secao-e-destaque);
   font-weight: 600;
   color: var(--cor-titulo-secao);
 }
 
 .formulario{
-  height: 90%;
+  height: var(--height-formulario);
   margin-top: 1rem;
   display: flex;
   flex-direction: column;
@@ -90,6 +90,8 @@
 .label .label-principal{
   display: block;
   font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-size: var(--size-txt-label-principal);
 }
 
 .label .label-informacoes{
@@ -142,7 +144,7 @@
   padding-top: 2rem;
   padding-bottom: 2.25rem;
   position: relative;
-  border-bottom: 1px dashed #000;
+  border-bottom: 1px dashed var(--cor-borda-div-grupo);
 }
 
 .titulo-destaque{
@@ -164,4 +166,16 @@ main.music-img .exemplo-apresentacao{
 main.music-img .exemplo-apresentacao .card{
   background: url(../../img/background/bckg-card-exemplo-music-img.png) center / cover no-repeat;
   /* backdrop-filter: blur(0px); */
+}
+
+@media screen and (max-width: 375px) {
+  .botao-carregar-img span{
+    display: none;
+  }
+
+  .botao-carregar-img i::after{
+    content: "Carregar imagem";
+    margin-left: 0.25rem;
+    font-style: normal;
+  }
 }

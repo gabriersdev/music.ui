@@ -9,10 +9,10 @@
 
 .esquerda,
 .direita{
-  font-size: 1.25rem;
+  font-size: var(--size-txt);
   line-height: normal;
   width: 50%;
-  padding: 5rem;
+  padding: var(--padding-secoes);
 }
 
 .main--music-img{
@@ -44,14 +44,14 @@
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: var(--bckg-divisor);
-  padding: 1.25rem;
+  padding: var(--padding-divisor);
   border-radius: 50%;
   font-weight: 800;
   font-size: 1.875rem;
 }
 
 .divisor span{
-  background-image: linear-gradient(130deg, #87D1CA 10%, #32CCBC 100%);
+  background-image: var(--divisor-linear);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -59,7 +59,7 @@
 
 /* Feedback Upload */
 .feedback-upload{
-  border: 1px solid rgba(0, 0, 0, 0.25);
+  border: 1px solid var(--border-feedback-upload);
   border-radius: 5px;
   display: flex;
   align-items: center;
@@ -68,21 +68,17 @@
 }
 
 .feedback-upload--destaque{
-  color: #145049;
+  color: var(--cor-txt-destaque);
 }
 
 .feedback-upload--img{
   width: 75px;
-  height: 70px;
+  height: 100%;
 }
 
 .feedback-upload--txt-confirmacao{
   margin-left: 1rem;
   font-size: 1rem;
-}
-
-.feedback-upload--txt-confirmacao b{
-  margin-bottom: 0.5rem;
 }
 
 /* Rodapé */
@@ -91,19 +87,7 @@
   line-height: 1.5;
 }
 
-.rodape--informacoes--app{
-  
-}
-
-.rodape--informacoes--app i{
-  
-}
-
-.rodape--informacoes-dev{
-  
-}
-
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1140px) {
   .main--music-img,
   .main--music-txt{
     height: 50vh;
@@ -126,5 +110,11 @@
   .direita.main--music-txt,
   .direita.card-final{
     display: flex;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .feedback-upload--txt-confirmacao span{
+    display: none;
   }
 }

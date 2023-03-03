@@ -8,13 +8,13 @@
 }
 
 .card{
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: var(--bckg-card);
   border-radius: 15px;
   border: unset;
-  min-height: 600px;
-  max-height: 600px;
-  min-width: 500px;
-  max-width: 500px;
+  min-height: var(--height-card);
+  max-height: var(--height-card);
+  min-width: var(--width-card);
+  max-width: var(--width-card);
   border: unset;
   padding: 1.5rem;
   box-sizing: border-box;
@@ -27,8 +27,8 @@
 .card .imagem{
   border: unset;
   border-radius: inherit;
-  width: 500px;
-  height: 600px;
+  width: var(--width-card);
+  height: var(--height-card);
   top: 0;
   left: 0;
   /* z-index: 0; */
@@ -42,30 +42,30 @@
 .card--logo-app{
   font-family: var(--fonte-titulo-app);
   font-weight: 800;
-  color: rgba(0, 0, 0, 0.5);
+  color: var(--cor-logo-app);
   /* z-index: 1; */
   position: absolute;
-  top: 1.5rem;
-  left: 1.5rem;
+  top: var(--espaco-info-card);
+  left: var(--espaco-info-card);
 }
 
 .card--informacoes{
   color: #FFF;
-  text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: 0px 0px 4px var(--txt-shadow-card-info);
   /* z-index: 2; */
   width: calc(inherit - 1.5rem);
   position: absolute;
-  bottom: 1.5rem;
-  right: 1.5rem;
-  left: 1.5rem;
+  bottom: var(--espaco-info-card);
+  right: var(--espaco-info-card);
+  left: var(--espaco-info-card);
 }
 
 .card--informacoes--versos{
   font-family: 'Inter Tight', 'Inter', sans-serif;
-  font-size: 2.5rem;
+  font-size: var(--size-txt-versos);
   font-weight: 600;
   padding: 1rem;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: var(--bckg-versos);
   backdrop-filter: blur(5px);
   border-radius: 10px;
   margin-bottom: 2rem;
@@ -82,8 +82,4 @@
 
 .card--informacoes--autoria .autor::after{
   content: " - ";
-}
-
-.card--informacoes--autoria .nome-musica{
-
 }
