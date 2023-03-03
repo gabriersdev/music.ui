@@ -101,29 +101,29 @@
       
       <form action="#" method="POST" class="formulario">
         <div class="form-grupo">
-          <label class="label" for="">
+          <label class="label" for="input-texto-verso">
             <span class="label-principal">Verso da música</span>
             <span class="label-informacoes">Texto obrigatório. Até 50 caracteres.</span>
           </label>
           <div class="input-grupo">
-            <input placeholder="Verso da música" type="text" class="input-texto" data-input="verso" name="" id="" required maxlength="50">
+            <input placeholder="Verso da música" type="text" class="input-texto" data-input="verso" name="input-texto-verso" id="input-texto-verso" required maxlength="50">
           </div>
           
-          <label for="" class="label-input-color"><i class="bi bi-palette-fill"></i></label>
-          <input type="color" class="input-color" name="" id="">
+          <label for="input-color-1" class="label-input-color"><i class="bi bi-palette-fill"></i></label>
+          <input type="color" class="input-color" name="input-color-1" id="input-color-1">
         </div>
         
         <div class="form-grupo">
-          <label class="label" for="">
+          <label class="label" for="input-texto-autor">
             <span class="label-principal">Autor da música</span>
             <span class="label-informacoes">Texto opcional. Até 20 caracteres.</span>
           </label>
           <div class="input-grupo">
-            <input placeholder="Autor da música" type="text" class="input-texto" data-input="autor" name="" id="" maxlength="20">
+            <input placeholder="Autor da música" type="text" class="input-texto" data-input="autor" name="input-texto-autor" id="input-texto-autor" maxlength="20">
           </div>
           
-          <label for="" class="label-input-color"><i class="bi bi-palette-fill"></i></label>
-          <input type="color" class="input-color" name="" id="">
+          <label for="input-color-2" class="label-input-color"><i class="bi bi-palette-fill"></i></label>
+          <input type="color" class="input-color" name="input-color-2" id="input-color-2">
         </div>
         
         <div class="form-grupo">
@@ -135,8 +135,8 @@
             <input placeholder="Nome da música" type="text" class="input-texto" data-input="nome" name="" id="" maxlength="20">
           </div>
           
-          <label for="" class="label-input-color"><i class="bi bi-palette-fill"></i></label>
-          <input type="color" class="input-color" name="" id="">
+          <label for="input-color-3" class="label-input-color"><i class="bi bi-palette-fill"></i></label>
+          <input type="color" class="input-color" name="input-color-3" id="input-color-3">
         </div>
         <button type="submit" class="botao botao-proximo">Próximo -></button>
       </form>
@@ -172,6 +172,13 @@
             <span class="label-informacoes">Formatos: PNG ou JPG.</span>
             <span class="label-informacoes">Dimensões recomendadas: 500 (largura) x 600 (altura).</span>
           </label>
+          <div class="feedback-upload none">
+            <img src="" alt="" class="feedback-upload--img">
+            <p class="feedback-upload--txt-confirmacao">
+              <b class="feedback-upload--destaque">Upload concluído!</b><br>
+              <span>O arquivo <b data-info="nome-arquivo-upload">imagem.png</b> foi enviado</span>
+            </p>
+          </div>
           <input type="file" class="input-file" name="" id="" required accept="image/png,image/jpeg">
           <button type="button" class="botao botao-carregar-img"><i class="bi bi-arrow-up-square"></i> Carregar imagem do dispositivo</button>
         </div>
@@ -206,8 +213,8 @@
       <div class="grupo-encerramento">
         <div class="div-grupo">
           <div class="label" for="">
-            <span class="label-principal" data-info="nome-apresentacao">Card de [Nome música] - [Nome autor]</span>
-            <span class="label-informacoes">Tamanho aproximado: <span data-info="tamanho-arquivo">2MB</span></span>
+            <span class="label-principal" data-info="nome-apresentacao">Card</span>
+            <span class="label-informacoes">Tamanho aproximado: <span data-info="tamanho-arquivo">Undefined</span></span>
           </div>
           <a href="" download="download.png" data-acao="download-capture"></a>
           <button type="button" class="botao botao-baixar">Baixar <i class="bi bi-arrow-down-square"></i></button>
@@ -229,7 +236,7 @@
       </footer>
     </section>
     
-    <section class="direita gerando-card">
+    <section class="direita gerando-card card-final">
       <div class="card" id="capture">
         <img src="" class="imagem hidden">
         <span class="card--logo-app">music.img</span>

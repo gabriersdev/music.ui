@@ -7,14 +7,6 @@
   flex-wrap: wrap;
 }
 
-.esquerda{
-  /* background-color: lightblue; */
-}
-
-.direita{
-  /* background-color: lightcyan; */
-}
-
 .esquerda,
 .direita{
   font-size: 1.25rem;
@@ -65,6 +57,34 @@
   -webkit-text-fill-color: transparent;
 }
 
+/* Feedback Upload */
+.feedback-upload{
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 1rem;
+}
+
+.feedback-upload--destaque{
+  color: #145049;
+}
+
+.feedback-upload--img{
+  width: 75px;
+  height: 70px;
+}
+
+.feedback-upload--txt-confirmacao{
+  margin-left: 1rem;
+  font-size: 1rem;
+}
+
+.feedback-upload--txt-confirmacao b{
+  margin-bottom: 0.5rem;
+}
+
 /* Rodapé */
 .rodape{
   margin-top: 1rem;
@@ -81,4 +101,30 @@
 
 .rodape--informacoes-dev{
   
+}
+
+@media screen and (max-width: 768px) {
+  .main--music-img,
+  .main--music-txt{
+    height: 50vh;
+  }
+
+  .esquerda,
+  .direita{
+    width: 100%;
+  }
+
+  .esquerda.informacoes-apresentacao,
+  .esquerda.dados-geracao-card{
+    min-height: 100vh;
+  }
+
+  .direita{
+    display: none;
+  }
+  
+  .direita.main--music-txt,
+  .direita.card-final{
+    display: flex;
+  }
 }

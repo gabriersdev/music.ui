@@ -23,13 +23,16 @@ import { capitalize, isEmpty } from './módulos/utilitarios.js';
     
     if(!isEmpty(imagem)){
       if(tipoValido(imagem)){
-        //Verificar tipo de arquivos PNG ou JPG
         image_lida.readAsDataURL(imagem);
         
         //Atualizar tamanho do arquivo
         atualizarTamanhoArquivo(imagem.size);
+        atualizarNomeArquivo();
         
         image_lida.addEventListener('loadend', function(evento){
+
+          exibirFeedbackUploadConcluido(evento.target.result, imagem);
+
           document.querySelectorAll('.imagem').forEach(imagem => {
             imagem.src = evento.target.result
             imagem.classList.value = 'imagem';
@@ -47,6 +50,13 @@ import { capitalize, isEmpty } from './módulos/utilitarios.js';
     }
     
   });
+
+  function exibirFeedbackUploadConcluido(imagem, dados){
+    const div = document.querySelector('.feedback-upload');
+    div.querySelector('img').src = imagem;
+    div.querySelector('[data-info="nome-arquivo-upload"]').textContent = `${dados.name}`;
+    div.classList.value = 'feedback-upload';
+  }
 
   function atualizarNomeArquivo(){
     const nome = capitalize(document.querySelector('[data-input="nome"]').value.trim());
