@@ -1,7 +1,8 @@
 "use strict";
 
-import { capitalize, isEmpty } from './módulos/utilitarios.js';
+import { atualizarDatas, capitalize, isEmpty } from './módulos/utilitarios.js';
 import { escutaClickInteracaoModalCompartilha } from './módulos/modal.js';
+import { conteudo_music_img } from './módulos/conteudo-music-img.js';
 
 (() => {
   
@@ -10,13 +11,92 @@ import { escutaClickInteracaoModalCompartilha } from './módulos/modal.js';
       window.location.reload;
     })
   })
+
+  function escutaSelecaoAPP(){
+    document.querySelectorAll('[data-app]').forEach(app => {
+      app.addEventListener('click', () => {
+
+        switch(app.dataset.app.toLowerCase()){
+          case 'music-img':
+            acionarFuncoesMusicIMG();
+          break;
+
+          case 'music-txt':
+            console.log('Implementação de ação para esta aplicação em construção.')
+          break;
+
+          default:
+            console.log('Não foi implementada nenhuma ação para esse botão.')
+          break;
+        }
+      });
+    })
+  }
+
+  escutaSelecaoAPP();
   
-  document.querySelector('.botao-carregar-img').addEventListener('click', () => {
-    document.querySelector('.input-file').click();
-  })
+  function acionarFuncoesMusicIMG(){
+    controlarMainPrincipal('hide');
+    carregarConteudosAPP(conteudo_music_img);
+
+    escutaClickCarregarImagem();
+    escutaUploadImagem();
+    escutaEventoFormularios();
+    escutaClickBotaoBaixar();
+
+    escutaClickBotoesProximaSecao();
+  }
+
+  acionarFuncoesMusicIMG();
+
+  function escutaClickBotoesProximaSecao(){
+    const secao1 = document.querySelector('[data-conteudo="secao-1"]');
+    const secao2 = document.querySelector('[data-conteudo="secao-2"]');
+    const secaoEncerramento = document.querySelector('[data-conteudo="secao-encerramento"]');
+
+    document.querySelector('[data-acao="comecar"]').addEventListener('click', () => {
+      secao1.classList.contains('none') ? secao1.classList.remove('none') : '';
+      //Descer a página
+    });
+
+    secao1.querySelector('form.formulario').addEventListener('submit' , (evento) => {
+      evento.preventDefault();
+      secao2.classList.contains('none') ? secao2.classList.remove('none') : '';
+      //Descer a página
+    });
+
+    secao2.querySelector('form.formulario').addEventListener('submit' , (evento) => {
+      evento.preventDefault();
+      secaoEncerramento.classList.contains('none') ? secaoEncerramento.classList.remove('none') : '';
+      //Descer a página
+    });
+
+  }
+
+
+  function controlarMainPrincipal(condicao){
+    condicao = condicao.toLowerCase().trim();
+    const main_principal = document.querySelector('[data-conteudo="main-principal"]')
+    if(condicao == 'show'){
+      main_principal.classList.value = 'main'
+    }else{
+      main_principal.classList.add('none');
+    }
+  }
+
+  function carregarConteudosAPP(conteudo_add){
+    document.querySelector('body').innerHTML += conteudo_add;
+  }
+
+  function escutaClickCarregarImagem(){
+    document.querySelector('.botao-carregar-img').addEventListener('click', () => {
+      document.querySelector('.input-file').click();
+    });
+  }
   
-  const input_file = document.querySelector('.input-file');
-  input_file.addEventListener('change', function(){
+  function escutaUploadImagem(){
+    const input_file = document.querySelector('.input-file');
+      input_file.addEventListener('change', function(){
     const imagem = input_file.files[0];    
     const image_lida = new FileReader();
     
@@ -47,7 +127,8 @@ import { escutaClickInteracaoModalCompartilha } from './módulos/modal.js';
       }
     }
     
-  });
+    });
+  }
 
   function exibirFeedbackUploadConcluido(imagem, dados){
     const div = document.querySelector('.feedback-upload');
@@ -90,29 +171,31 @@ import { escutaClickInteracaoModalCompartilha } from './módulos/modal.js';
     return tipo == 'png' || tipo == 'jpg';
   }
   
-  document.querySelectorAll('form.formulario').forEach(form => {
-    form.querySelectorAll('input').forEach(input => {
-      input.addEventListener('input', () => {
-        switch(input.classList.value){
-          case 'input-color':
-          atualizarCores(input);
-          break;
-          
-          case 'input-texto':
-          atualizarTextos(input);
-          break;
-          
-          case 'input-file':
-          //
-          break;
-          
-          default:
-          console.log('Há um erro na atribuição de classe para este elemento.');
-          break;
-        }
+  function escutaEventoFormularios(){
+    document.querySelectorAll('form.formulario').forEach(form => {
+      form.querySelectorAll('input').forEach(input => {
+        input.addEventListener('input', () => {
+          switch(input.classList.value){
+            case 'input-color':
+            atualizarCores(input);
+            break;
+            
+            case 'input-texto':
+            atualizarTextos(input);
+            break;
+            
+            case 'input-file':
+            //
+            break;
+            
+            default:
+            console.log('Há um erro na atribuição de classe para este elemento.');
+            break;
+          }
+        })
       })
     })
-  })
+  }
   
   function atualizarCores(input){
     //Atualiza a cor do ícone (label) do input:color
@@ -169,19 +252,22 @@ import { escutaClickInteracaoModalCompartilha } from './módulos/modal.js';
     }
   }
   
-  const download_capture = document.querySelector('a[data-acao="download-capture"]');
-  const card = document.querySelector('#capture');
-  
-  document.querySelector('.botao-baixar').addEventListener('click', () => {
-    card.style.borderRadius = '0';
-    html2canvas(card).then(canvas => {
-      const img = canvas;
-      download_capture.href = img.toDataURL('image/png').replace("image/png", "image/octet-stream");
-      download_capture.click();
+  function escutaClickBotaoBaixar(){
+    const download_capture = document.querySelector('a[data-acao="download-capture"]');
+    const card = document.querySelector('#capture');
+
+    document.querySelector('.botao-baixar').addEventListener('click', () => {
+      card.style.borderRadius = '0';
+      html2canvas(card).then(canvas => {
+        const img = canvas;
+        download_capture.href = img.toDataURL('image/png').replace("image/png", "image/octet-stream");
+        download_capture.click();
+      });
+      card.style.borderRadius = '15px';
+      $('#modal-compartilha').modal('show');
     });
-    card.style.borderRadius = '15px';
-    $('#modal-compartilha').modal('show');
-  })
+  }
   
+  atualizarDatas();
   escutaClickInteracaoModalCompartilha();
 })();

@@ -12,7 +12,15 @@ const capitalize = (valor) => {
   return valor.charAt(0).toUpperCase() + valor.substr(1, valor.length).toLowerCase();
 }
 
+const atualizarDatas = () => {
+  const dataAtual = new Date();
+  document.querySelectorAll("[data-ano-atual]").forEach(area => {
+    area.textContent = `${dataAtual.getFullYear()}`;
+  })
+} 
+
 export{
   isEmpty,
-  capitalize
+  capitalize,
+  atualizarDatas
 }

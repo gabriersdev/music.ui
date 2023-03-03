@@ -83,3 +83,9 @@
 .card--informacoes--autoria .autor::after{
   content: " - ";
 }
+
+@media screen and (max-width: 625px) {
+  section.card-final{
+    padding: 1rem;
+  }
+}

@@ -77,11 +77,18 @@
   }
 }
 
-@media screen and (max-width: 1140px) {
+@media screen and (max-width: 1140px) and (min-height: 800px) {
   :root{
     /* App */
     --padding-secoes: 15rem;
     --height-formulario: 80%;
+  }
+}
+
+@media screen and (max-height: 800px)  {
+  :root{
+    /* App */
+    --height-formulario: 70%;
   }
 }
 
@@ -118,10 +125,6 @@
     --size-titulo-secao-e-destaque: 2rem;
 
     --padding-secoes: 3.5rem;
-  }
-
-  section.card-final{
-    padding: 1rem;
   }
 }
 
