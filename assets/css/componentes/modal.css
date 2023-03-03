@@ -4,11 +4,11 @@
 
 #modal-compartilha .modal-body .icone{
   font-size: 2rem;
-  color: #3632BB;
+  color: var(--cor-icone-modal);
 }
 
 #modal-compartilha .modal-body h5{
-  color: #3632BB;
+  color: var(--cor-h5-modal);
   margin: 0.5rem 0;
   font-weight: 700;
 }
@@ -31,24 +31,24 @@
 }
 
 #modal-compartilha #link-compartilhamento{
-  border: 1px dashed #000 !important;
+  border: 1px dashed var(--cor-borda-link-modal) !important;
 }
 
 button#button-addon-link-copy{
-  border: 1px dashed #6C757D !important;
+  border: 1px dashed var(--cor-borda-botao-modal) !important;
 }
 
 #modal-compartilha .error{
-  color: #000000;
-  background-color: #E8A0A0;
+  color: var(--cor-txt-modal);
+  background-color: var(--bckg-botao-modal-erro);
 }
 
 #modal-compartilha .warning{
-  color: #000000;
-  background-color: #E99F3F;
+  color: var(--cor-txt-modal);
+  background-color: var(--bckg-botao-modal-alerta);
 }
 
 #modal-compartilha .success{
-  color: #000000;
-  background-color: #80DA80;
+  color: var(--cor-txt-modal);
+  background-color: var(--bckg-botao-modal-sucesso);
 }

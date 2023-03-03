@@ -1,8 +1,14 @@
 :root{
+  --preto: #000;
+  --cinza: #6C757D;
   --branco: #FFF;
+  --vermelho: #E8A0A0;
+  --amarelo: #E99F3F;
   --verde: #87D1CA;
+  --verde-claro: #80DA80;
   --verde-medio: #1F8378;
   --verde-escuro: #145049;
+  --roxo-azul: #3632BB;
 
   --fonte-titulo-app: 'Sora', 'Inter', sans-serif;
   --size-titulo-app: 3.75rem;
@@ -20,4 +26,14 @@
   --txt-placeholder-input: var(--verde-escuro);
   --border-input: var(--verde);
   --border-input-focus: var(--verde-medio);
+
+  /* Modal */
+  --cor-icone-modal: var(--roxo-azul);
+  --cor-h5-modal: var(--roxo-azul);
+  --cor-txt-modal: var(--preto);
+  --cor-borda-link-modal: var(--preto);
+  --cor-borda-botao-modal: var(--cinza);
+  --bckg-botao-modal-erro: var(--vermelho);
+  --bckg-botao-modal-alerta: var(--amarelo);
+  --bckg-botao-modal-sucesso: var(--verde-claro);
 }
