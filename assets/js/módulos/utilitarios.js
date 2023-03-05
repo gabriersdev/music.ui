@@ -9,7 +9,7 @@ const isEmpty = (valor) => {
 }
 
 const capitalize = (valor) => {
-  return valor.charAt(0).toUpperCase() + valor.substr(1, valor.length).toLowerCase();
+  return valor.charAt(0).toUpperCase() + valor.substr(1, valor.length);
 }
 
 const atualizarDatas = () => {
