@@ -301,6 +301,21 @@ import { conteudo_music_img } from './módulos/conteudo-music-img.js';
     })
   }
 
+  const url = new URL(window.location);
+  console.log(url);
+  
+  if(url.origin !== 'http://127.0.0.1:5500'){
+
+    const content = `default-src 'self' 'unsafe-inline'; 
+    style-src 'self' 'unsafe-inline' https://fonts.gstatic.com https://cdn.jsdelivr.net/ https://fonts.googleapis.com/; 
+    img-src ${url.origin} blob: data:; 
+    font-src 'self' 'unsafe-inline' https://fonts.gstatic.com https://cdn.jsdelivr.net/ https://fonts.googleapis.com/; 
+    script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net/ https://code.jquery.com/ https://cdnjs.cloudflare.com/; 
+    `
+
+    document.querySelector('[data-csp]').setAttribute('content', content);
+  }
+
   atualizarDatas();
   escutaClickInteracaoModalCompartilha();
   controleFechamentoModal();
