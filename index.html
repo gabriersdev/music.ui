@@ -24,12 +24,12 @@
   
   <title>music.ui</title>
   
-  <script src="./assets/js/frameworks/bootstrap.js"></script>
-  <script src="./assets/js/frameworks/jquery.js"></script>
-  <script src="./assets/js/frameworks/pooper.js"></script>
-  <script src="./assets/js/frameworks/sweet-alert.js"></script>
-  <script src="./assets/js/frameworks/html2canvas.min.js"></script>
-  <script type="module" src="./assets/js/script.js"></script>
+  <script src="./assets/js/frameworks/jquery.js" defer></script>
+  <script src="./assets/js/frameworks/bootstrap.js" defer></script>
+  <script src="./assets/js/frameworks/pooper.js" defer></script>
+  <script src="./assets/js/frameworks/sweet-alert.js" defer></script>
+  <script src="./assets/js/frameworks/html2canvas.min.js" defer></script>
+  <script type="module" src="./assets/js/script.js" defer></script>
 </head>
 <body>
   <noscript>
@@ -68,6 +68,19 @@
             <button class="btn btn-outline-secondary" type="button" id="button-addon-link-copy"><i class="bi bi-clipboard2"></i>&nbsp;Copiar</button>
           </div>
           <div class="feedback-message" id="feedback-message"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade modal-lg" id="modal-preview" tabindex="-1" aria-labelledby="modal-preview-label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content modal-estilo">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modal-preview-label">Preview</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
         </div>
       </div>
     </div>

@@ -49,6 +49,8 @@ import { conteudo_music_img } from './módulos/conteudo-music-img.js';
     escutaClickBotaoBaixar();
 
     escutaClickBotoesProximaSecao();
+
+    escutaClickBotaoPreview();
   }
 
   acionarFuncoesMusicIMG();
@@ -280,7 +282,17 @@ import { conteudo_music_img } from './módulos/conteudo-music-img.js';
       $('#modal-compartilha').modal('show');
     });
   }
-  
+
+  function escutaClickBotaoPreview(){
+    document.querySelector('button[data-acao="exibir-modal-preview"]').addEventListener('click', () => {
+      const card = document.querySelector('section.card-final').innerHTML;
+      const modal_preview = document.querySelector('#modal-preview');
+      modal_preview.querySelector('.modal-body').innerHTML = card;
+
+      $('#modal-preview').modal('show');
+    })
+  }
+
   atualizarDatas();
   escutaClickInteracaoModalCompartilha();
 })();
