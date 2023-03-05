@@ -19,8 +19,19 @@ const atualizarDatas = () => {
   })
 } 
 
+const controleFechamentoModal = () => {
+  const modais = document.querySelectorAll('.modal');
+  modais.forEach(modal => {
+    const btnFecha = modal.querySelector('[data-modal-fecha]');
+    btnFecha.addEventListener('click', () => {
+      $('#' + modal.id).modal('hide');
+    })
+  })
+}
+
 export{
   isEmpty,
   capitalize,
-  atualizarDatas
+  atualizarDatas,
+  controleFechamentoModal
 }

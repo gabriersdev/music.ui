@@ -1,6 +1,6 @@
 "use strict";
 
-import { atualizarDatas, capitalize, isEmpty } from './módulos/utilitarios.js';
+import { atualizarDatas, capitalize, isEmpty, controleFechamentoModal } from './módulos/utilitarios.js';
 import { escutaClickInteracaoModalCompartilha } from './módulos/modal.js';
 import { conteudo_music_img } from './módulos/conteudo-music-img.js';
 
@@ -295,4 +295,5 @@ import { conteudo_music_img } from './módulos/conteudo-music-img.js';
 
   atualizarDatas();
   escutaClickInteracaoModalCompartilha();
+  controleFechamentoModal();
 })();
