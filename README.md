@@ -20,7 +20,7 @@ Você pode [acessar o music.ui aqui][musicUI] ou ver o [protótipo na Behance][p
 - [Google Fonts][fonts_google] (fontes usadas: Inter, Inter Tight e Sora)
 
 [musicUI]:https://github.com/gabrieszin/music.ui
-[prototipo]:https://github.com/gabrieszin/
+[prototipo]:https://www.behance.net/gallery/164660859/Birthday-Message
 [html2canvas]:https://html2canvas.hertzen.com
 [bootstrap_icons]:https://icons.getbootstrap.com
 [bootstrap]:https://getbootstrap.com
