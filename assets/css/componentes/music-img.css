@@ -68,7 +68,8 @@
   font-size: var(--size-titulo-secao-e-destaque);
   font-weight: 600;
   color: var(--cor-titulo-secao);
-  padding: 1rem 0;
+  /* padding: 1rem 0; */
+  padding-bottom: 1rem;
 }
 
 .formulario{
