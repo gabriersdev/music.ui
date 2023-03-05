@@ -13,6 +13,12 @@
   line-height: normal;
   width: 50%;
   padding: var(--padding-secoes);
+  border-top: 1px dashed #1F8378;
+}
+
+.esquerda.informacoes-apresentacao,
+.direita.exemplo-apresentacao{
+  border-top: unset;
 }
 
 .main--music-img{
