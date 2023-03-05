@@ -148,7 +148,15 @@ import { conteudo_music_img } from './módulos/conteudo-music-img.js';
   function exibirFeedbackUploadConcluido(imagem, dados){
     const div = document.querySelector('.feedback-upload');
     div.querySelector('img').src = imagem;
-    div.querySelector('[data-info="nome-arquivo-upload"]').textContent = `${dados.name}`;
+
+    let nome = dados.name;
+
+    if(nome.length > 20){
+      nome = nome.substr(0, 20);
+      nome += '...';
+    }
+
+    div.querySelector('[data-info="nome-arquivo-upload"]').textContent = `${nome}`;
     div.classList.value = 'feedback-upload';
   }
 
