@@ -6,6 +6,10 @@ import { conteudo_music_img } from './módulos/conteudo-music-img.js';
 
 (() => {
   
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
+
   document.querySelectorAll('[data-recarrega-pagina]').forEach(botao => {
     botao.addEventListener('click', () => {
       window.location.reload;
@@ -57,14 +61,16 @@ import { conteudo_music_img } from './módulos/conteudo-music-img.js';
     document.querySelector('[data-acao="comecar"]').addEventListener('click', () => {
       secao1.classList.contains('none') ? secao1.classList.remove('none') : '';
       //Descer a página
-      posicionar(secao1.querySelector('h2'));
+      // posicionar(secao1.querySelector('h2'));
+      posicionar(secao1);
     });
 
     secao1.querySelector('form.formulario').addEventListener('submit' , (evento) => {
       evento.preventDefault();
       secao2.classList.contains('none') ? secao2.classList.remove('none') : '';
       //Descer a página
-      posicionar(secao2.querySelector('h2'));
+      // posicionar(secao2.querySelector('h2'));
+      posicionar(secao2);
     });
 
     secao2.querySelector('form.formulario').addEventListener('submit' , (evento) => {
@@ -72,6 +78,7 @@ import { conteudo_music_img } from './módulos/conteudo-music-img.js';
       secaoEncerramento.classList.contains('none') ? secaoEncerramento.classList.remove('none') : '';
       //Descer a página
       posicionar(secaoEncerramento.querySelector('h2'));
+      posicionar(secaoEncerramento);
     });
 
   }

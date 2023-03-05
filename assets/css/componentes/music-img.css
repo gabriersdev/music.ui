@@ -57,9 +57,10 @@
 
 .dados-geracao-card{
   display: flex;
-  justify-content: flex-start;
+  /* align-items: center; */
+  justify-content: space-between;
   flex-direction: column;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
 }
 
 .titulo-secao, 
@@ -67,10 +68,11 @@
   font-size: var(--size-titulo-secao-e-destaque);
   font-weight: 600;
   color: var(--cor-titulo-secao);
+  padding: 1rem 0;
 }
 
 .formulario{
-  height: var(--height-formulario);
+  height: 100%;
   margin-top: 1rem;
   display: flex;
   flex-direction: column;

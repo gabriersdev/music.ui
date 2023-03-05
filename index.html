@@ -24,12 +24,12 @@
   
   <title>music.ui</title>
   
-  <script src="./assets/js/frameworks/jquery.js" defer></script>
-  <script src="./assets/js/frameworks/bootstrap.js" defer></script>
-  <script src="./assets/js/frameworks/pooper.js" defer></script>
-  <script src="./assets/js/frameworks/sweet-alert.js" defer></script>
-  <script src="./assets/js/frameworks/html2canvas.min.js" defer></script>
-  <script type="module" src="./assets/js/script.js" defer></script>
+  <script src="./assets/js/frameworks/bootstrap.js"></script>
+  <script src="./assets/js/frameworks/jquery.js"></script>
+  <script src="./assets/js/frameworks/pooper.js"></script>
+  <script src="./assets/js/frameworks/sweet-alert.js"></script>
+  <script src="./assets/js/frameworks/html2canvas.min.js"></script>
+  <script type="module" src="./assets/js/script.js"></script>
 </head>
 <body>
   <noscript>
@@ -74,5 +74,9 @@
   </div>
   
   <main class="main" data-conteudo="main-principal"><button data-app="music-img" class="esquerda main--music-img"><p>music.img</p></button><span class="divisor"><span>OU</span></span><button data-app="music-txt" class="direita main--music-txt"><p>music.txt</p></button></main>
+
+  <button data-toggle="tooltip" data-bs-custom-class="custom-tooltip" data-placement="left" title="Preview" class="preview-botao">
+    <i class="bi bi-eye-fill"></i>
+  </button>
 </body>
 </html>

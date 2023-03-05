@@ -67,7 +67,8 @@
   --bckg-versos: rgba(255, 255, 255, 0.1);
 
   /* Music IMG */
-  --bckg-music-img: linear-gradient(153.69deg, #90F7EC80 0%, #32CCBC80 100%);
+  /* --bckg-music-img: linear-gradient(153.69deg, #90F7EC80 0%, #32CCBC80 100%); */
+  --bckg-music-img: #90F7EC80;
 }
 
 @media screen and (max-width: 1240px) {
@@ -80,7 +81,7 @@
 @media screen and (max-width: 1140px) and (min-height: 800px) {
   :root{
     /* App */
-    --padding-secoes: 15rem;
+    --padding-secoes: 5rem 15rem;
     --height-formulario: 80%;
   }
 }
@@ -95,7 +96,7 @@
 @media screen and (max-width: 1060px) {
   :root{
     /* App */
-    --padding-secoes: 10rem;
+    --padding-secoes: 5rem 10rem;
   }
 }
 

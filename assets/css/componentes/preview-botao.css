@@ -1,0 +1,14 @@
+.preview-botao{
+  display: fixed;
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1rem;
+  z-index: 1;
+  font-size: 1.75rem;
+  padding: 0.75rem 0.95rem;
+  color: #555;
+  background-color: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+}

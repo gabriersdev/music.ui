@@ -29,11 +29,13 @@ Na internet ele é barril, na vida real ele é quieto
 
 <main class="main music-img none" data-conteudo="secao-1">
 <section class="esquerda dados-geracao-card">
+
+<form action="#" method="POST" class="formulario">
+
+<div>
 <h2 class="titulo-secao">
 Passo 1 de 2
 </h2>
-
-<form action="#" method="POST" class="formulario">
 <div class="form-grupo">
 <label class="label" for="input-texto-verso">
 <span class="label-principal">Verso da música</span>
@@ -72,6 +74,8 @@ Passo 1 de 2
 <label for="input-color-3" class="label-input-color"><i class="bi bi-palette-fill"></i></label>
 <input type="color" class="input-color" name="input-color-3" id="input-color-3">
 </div>
+</div>
+
 <button type="submit" class="botao botao-proximo" data-acao="ir-para-secao-2">Próximo -></button>
 </form>
 </section>
@@ -94,11 +98,12 @@ O verso da música aparecerá aqui
 
 <main class="main music-img none" data-conteudo="secao-2">
 <section class="esquerda dados-geracao-card">
+
+<form action="#" method="POST" class="formulario">
+<div>
 <h2 class="titulo-secao">
 Passo 2 de 2
 </h2>
-
-<form action="#" method="POST" class="formulario">
 <div class="form-grupo">
 <label class="label" for="">
 <span class="label-principal">Imagem</span>
@@ -116,6 +121,7 @@ Passo 2 de 2
 <div>
 <input type="file" class="input-file" name="input-file-img" id="input-file-img" required accept="image/png,image/jpeg">
 <button type="button" class="botao botao-carregar-img"><i class="bi bi-arrow-up-square"></i> <span>Carregar imagem do dispositivo</span></button>
+</div>
 </div>
 </div>
 
@@ -142,11 +148,12 @@ O verso da música aparecerá aqui
 
 <main class="main music-img none" data-conteudo="secao-encerramento">
 <section class="esquerda dados-geracao-card">
+
+<div>
+<div class="grupo-encerramento">
 <h2 class="titulo-secao">
 Tudo certo :)
 </h2>
-
-<div class="grupo-encerramento">
 <div class="div-grupo">
 <div class="label" for="">
 <span class="label-principal" data-info="nome-apresentacao">Card</span>
@@ -170,6 +177,7 @@ Conheça outros projetos do desenvolvedor
 <p class="rodape--informacoes--app"><i class="bi bi-c-circle"></i> 2023 - <time data-ano-atual>2023</time> music.img</p>
 <address class="rodape--informacoes-dev">Desenvolvido por Gabriel Ribeiro</address>
 </footer>
+</div>
 </section>
 
 <section class="direita gerando-card card-final">
