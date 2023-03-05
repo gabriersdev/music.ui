@@ -65,6 +65,7 @@
   align-items: center;
   justify-content: flex-start;
   margin-bottom: 1rem;
+  min-height: 70px;
 }
 
 .feedback-upload--destaque{
