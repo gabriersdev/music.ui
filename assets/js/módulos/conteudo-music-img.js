@@ -196,8 +196,4 @@ O verso da música aparecerá aqui
 </div>
 </section>
 </main>
-
-<button data-toggle="tooltip" data-acao="exibir-modal-preview" data-bs-custom-class="custom-tooltip" data-placement="left" title="Preview" class="preview-botao">
-<i class="bi bi-eye-fill"></i>
-</button>
 `;
