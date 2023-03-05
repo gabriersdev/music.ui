@@ -57,22 +57,28 @@ import { conteudo_music_img } from './módulos/conteudo-music-img.js';
     document.querySelector('[data-acao="comecar"]').addEventListener('click', () => {
       secao1.classList.contains('none') ? secao1.classList.remove('none') : '';
       //Descer a página
+      posicionar(secao1);
     });
 
     secao1.querySelector('form.formulario').addEventListener('submit' , (evento) => {
       evento.preventDefault();
       secao2.classList.contains('none') ? secao2.classList.remove('none') : '';
       //Descer a página
+      posicionar(secao2);
     });
 
     secao2.querySelector('form.formulario').addEventListener('submit' , (evento) => {
       evento.preventDefault();
       secaoEncerramento.classList.contains('none') ? secaoEncerramento.classList.remove('none') : '';
       //Descer a página
+      posicionar(secaoEncerramento);
     });
 
   }
 
+  function posicionar(destino){
+    window.scrollTo({top: destino.offsetTop, behavior: 'smooth'});
+  }
 
   function controlarMainPrincipal(condicao){
     condicao = condicao.toLowerCase().trim();

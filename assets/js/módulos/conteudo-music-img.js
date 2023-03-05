@@ -1,6 +1,6 @@
 export const conteudo_music_img = `
 <!-- music.img -->
-<main class="main music-img">
+<main class="main music-img" data-conteudo="apresentacao">
 <section class="esquerda informacoes-apresentacao">
 <h1 class="titulo-app">
 music.img
