@@ -183,7 +183,7 @@ import { conteudo_music_img } from './módulos/conteudo-music-img.js';
 
   function tipoValido(arquivo){
     const tipo = arquivo.type.toString().split('/')[1].toLowerCase();
-    return tipo == 'png' || tipo == 'jpg';
+    return tipo == 'png' || tipo == 'jpeg';
   }
   
   function escutaEventoFormularios(){
