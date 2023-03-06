@@ -157,7 +157,7 @@ Tudo certo :)
 <h2 class="titulo-destaque">
 Conheça outros projetos do desenvolvedor
 </h2>
-<a href="" class="botao botao-portfolio">Ver o portfólio</a>
+<a href="https://gabrieszin.github.io/portfolio/" class="botao botao-portfolio">Ver o portfólio</a>
 </div>
 </div>
 
