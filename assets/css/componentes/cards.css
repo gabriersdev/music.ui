@@ -72,7 +72,7 @@
 }
 
 .card--informacoes--autoria{
-  font-size: 1.5rem;
+  font-size: var(--size-txt-autoria);
   font-weight: 600;
 }
 
