@@ -57,7 +57,7 @@
   --divisor-linear: linear-gradient(130deg, var(--verde) 10%, var(--verde-agua) 100%);
 
   /* Card */
-  --bckg-card: rgba(0, 0, 0, 0.2);
+  --bckg-card: #00000033;
   --height-card: 600px;
   --width-card: 500px;
   --cor-logo-app: rgba(0, 0, 0, 0.5);
@@ -70,6 +70,18 @@
   /* Music IMG */
   /* --bckg-music-img: linear-gradient(153.69deg, #90F7EC80 0%, #32CCBC80 100%); */
   --bckg-music-img: #90F7EC80;
+
+  /* Music TXT */
+  --bckg-music-txt: #ABDCFF;
+  --cor-txt-descricao-titulo-app-music-txt: #007DD6;
+  --bckg-botao-music-txt:#7FBEEC;
+  --cor-txt-botao-music-txt: #004F87;
+  --cor-titulo-secao-music-txt: #004F87;
+  --bckg-input-music-txt: #7FBEEC;
+  --border-input-music-txt: #7FBEEC;
+  --txt-placeholder-input-music-txt: #004F87;
+  --border-input-focus-music-txt: #6FAEDB;
+  --cor-borda-div-grupo-music-txt: #004F87;
 }
 
 @media screen and (max-width: 1240px) {

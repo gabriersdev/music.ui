@@ -1,0 +1,74 @@
+/* Mains de passos/estados do Music.img */
+.music-txt{
+  background: var(--bckg-music-txt);
+}
+
+.music-txt .descricao-titulo-app{
+  color: var(--cor-txt-descricao-titulo-app-music-txt);
+}
+
+.music-txt .botao{
+  background-color: var(--bckg-botao-music-txt);
+  color: var(--cor-txt-botao-music-txt);
+}
+
+.music-txt .titulo-secao,
+.music-txt .titulo-destaque{
+  color: var(--cor-titulo-secao-music-txt);
+}
+
+.music-txt .input-grupo{
+  background-color: var(--bckg-input-music-txt);
+}
+
+.music-txt .input-texto{
+  border: 3.5px solid var(--border-input-music-txt);
+}
+
+.music-txt .input-texto::placeholder{
+  color: var(--txt-placeholder-input-music-txt);
+}
+
+.music-txt .input-texto:focus{
+  border-color: var(--border-input-focus-music-txt);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus{
+  /* -webkit-text-fill-color: initial; */
+  /* -webkit-box-shadow: 0 0 0px 1000px var(--bckg-input) inset; */
+}
+
+.music-txt .div-grupo{
+  border-bottom: 1px dashed var(--cor-borda-div-grupo-music-txt);
+}
+
+/* Seleção de cor de fundo */
+.cor-selecionada{
+  background-color: #00000033;
+  border: 1px solid #808080;
+  border-radius: 5px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  min-height: 4rem;
+  position: relative;
+  cursor: pointer;
+  text-shadow: 0px 0px 4px var(--txt-shadow-card-info);
+}
+
+.label-input-cor-selecionada{
+  color: #FFF;
+}
+
+.input-cor-selecionada{
+  opacity: 0;
+  position: absolute;
+}
+
+.cor-selecionada--span{
+  color: #FFF; /* Definir como cor do verso... */
+}

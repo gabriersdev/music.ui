@@ -1,9 +1,8 @@
-export const conteudo_music_img = `
-<!-- music.img -->
-<main class="main music-img" data-conteudo="apresentacao">
+export const conteudo_music_txt = `
+<main class="main music-txt" data-conteudo="apresentacao">
 <section class="esquerda informacoes-apresentacao">
 <h1 class="titulo-app">
-music.img
+music.txt
 </h1>
 
 <p class="descricao-titulo-app">Crie cards com seus versos preferidos das suas músicas favoritas</p>
@@ -11,9 +10,8 @@ music.img
 </section>
 
 <section class="direita exemplo-apresentacao">
-<span class="efeito"></span>
 <div class="card">
-<span class="card--logo-app">music.img</span>
+<span class="card--logo-app">music.txt</span>
 <div class="card--informacoes">
 <p class="card--informacoes--versos">
 Na internet ele é barril, na vida real ele é quieto
@@ -27,7 +25,7 @@ Na internet ele é barril, na vida real ele é quieto
 </section>
 </main>
 
-<main class="main music-img none" data-conteudo="secao-1">
+<main class="main music-txt" data-conteudo="secao-1">
 <section class="esquerda dados-geracao-card">
 
 <form action="#" method="POST" class="formulario">
@@ -82,7 +80,7 @@ Passo 1 de 2
 
 <section class="direita gerando-card">
 <div class="card">
-<span class="card--logo-app">music.img</span>
+<span class="card--logo-app">music.txt</span>
 <div class="card--informacoes">
 <p class="card--informacoes--versos" data-info="verso">
 O verso da música aparecerá aqui
@@ -96,7 +94,7 @@ O verso da música aparecerá aqui
 </section>
 </main>
 
-<main class="main music-img none" data-conteudo="secao-2">
+<main class="main music-txt" data-conteudo="secao-2">
 <section class="esquerda dados-geracao-card">
 
 <form action="#" method="POST" class="formulario">
@@ -105,22 +103,14 @@ O verso da música aparecerá aqui
 Passo 2 de 2
 </h2>
 <div class="form-grupo">
-<label class="label" for="">
-<span class="label-principal">Imagem</span>
-<span class="label-informacoes">Envio obrigatório.</span>
-<span class="label-informacoes">Formatos: PNG ou JPG.</span>
-<span class="label-informacoes">Dimensões recomendadas: 500 (largura) x 600 (altura).</span>
-</label>
-<div class="feedback-upload none">
-<img src="" alt="" class="feedback-upload--img">
-<p class="feedback-upload--txt-confirmacao">
-<b class="feedback-upload--destaque">Upload concluído!</b><br>
-<span>O arquivo <b data-info="nome-arquivo-upload">imagem.png</b> foi enviado</span>
-</p>
+<div class="label" for="">
+<span class="label-principal">Cor do card</span>
+<span class="label-informacoes">Seleção obrigatória.</span>
 </div>
-<div>
-<input type="file" class="input-file" name="input-file-img" id="input-file-img" required accept="image/png,image/jpeg">
-<button type="button" class="botao botao-carregar-img"><i class="bi bi-arrow-up-square"></i> <span>Carregar imagem do dispositivo</span></button>
+<div class="cor-selecionada" data-acao="selecao-cor-bckg-card">
+<span class="cor-selecionada--span">#00000033</span>
+<label for="input-color-4" class="label-input-cor-selecionada"><i class="bi bi-palette-fill"></i></label>
+<input type="color" class="input-cor-selecionada" name="input-color-4" id="input-color-4" required>
 </div>
 </div>
 </div>
@@ -131,8 +121,7 @@ Passo 2 de 2
 
 <section class="direita gerando-card">
 <div class="card">
-<img src="" class="imagem hidden">
-<span class="card--logo-app">music.img</span>
+<span class="card--logo-app">music.txt</span>
 <div class="card--informacoes">
 <p class="card--informacoes--versos" data-info="verso">
 O verso da música aparecerá aqui
@@ -146,7 +135,7 @@ O verso da música aparecerá aqui
 </section>
 </main>
 
-<main class="main music-img none" data-conteudo="secao-encerramento">
+<main class="main music-txt" data-conteudo="secao-encerramento">
 <section class="esquerda dados-geracao-card">
 
 <div>
@@ -174,7 +163,7 @@ Conheça outros projetos do desenvolvedor
 </div>
 
 <footer class="rodape">
-<p class="rodape--informacoes--app"><i class="bi bi-c-circle"></i> 2023 - <time data-ano-atual>2023</time> music.img</p>
+<p class="rodape--informacoes--app"><i class="bi bi-c-circle"></i> 2023 - <time data-ano-atual>2023</time> music.txt</p>
 <address class="rodape--informacoes-dev">Desenvolvido por Gabriel Ribeiro</address>
 </footer>
 </div>
@@ -182,8 +171,7 @@ Conheça outros projetos do desenvolvedor
 
 <section class="direita gerando-card card-final">
 <div class="card" id="capture">
-<img src="" class="imagem hidden">
-<span class="card--logo-app">music.img</span>
+<span class="card--logo-app">music.txt</span>
 <div class="card--informacoes">
 <p class="card--informacoes--versos" data-info="verso">
 O verso da música aparecerá aqui
@@ -196,4 +184,4 @@ O verso da música aparecerá aqui
 </div>
 </section>
 </main>
-`;
+`

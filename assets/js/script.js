@@ -3,6 +3,7 @@
 import { atualizarDatas, capitalize, isEmpty, controleFechamentoModal } from './módulos/utilitarios.js';
 import { escutaClickInteracaoModalCompartilha } from './módulos/modal.js';
 import { conteudo_music_img } from './módulos/conteudo-music-img.js';
+import { conteudo_music_txt } from './módulos/conteudo-music-txt.js';
 
 (() => {
   
@@ -26,7 +27,7 @@ import { conteudo_music_img } from './módulos/conteudo-music-img.js';
           break;
 
           case 'music-txt':
-            console.log('Implementação de ação para esta aplicação em construção.')
+            acionarFuncoesMusicTXT();
           break;
 
           default:
@@ -51,9 +52,24 @@ import { conteudo_music_img } from './módulos/conteudo-music-img.js';
     escutaClickBotoesProximaSecao();
 
     escutaClickBotaoPreview();
+    controleFechamentoModal();
   }
 
-  acionarFuncoesMusicIMG();
+  function acionarFuncoesMusicTXT(){
+    controlarMainPrincipal('hide');
+    carregarConteudosAPP(conteudo_music_txt);
+
+
+    escutaEventoFormularios();
+    escutaClickBotaoBaixar();
+
+    escutaClickBotoesProximaSecao();
+
+    escutaClickBotaoPreview();
+    controleFechamentoModal();
+
+    escutaClickSelecaoCorBCKG();
+  }
 
   function escutaClickBotoesProximaSecao(){
     const secao1 = document.querySelector('[data-conteudo="secao-1"]');
@@ -211,6 +227,10 @@ import { conteudo_music_img } from './módulos/conteudo-music-img.js';
             //
             break;
             
+            case 'input-cor-selecionada':
+            atualizarCorBCKGCard(input);
+            break;
+
             default:
             console.log('Há um erro na atribuição de classe para este elemento.');
             break;
@@ -220,6 +240,34 @@ import { conteudo_music_img } from './módulos/conteudo-music-img.js';
     })
   }
   
+  function atualizarCorBCKGCard(input){
+    const valor = input.value.toUpperCase();
+    document.querySelectorAll('.card').forEach(card => {
+      card.style.backgroundColor = valor;
+    })
+
+    input.parentElement.querySelector('span.cor-selecionada--span').textContent = valor;
+    input.parentElement.style.backgroundColor = valor;
+  }
+
+  function escutaClickSelecaoCorBCKG(){
+    const div = document.querySelector('[data-acao="selecao-cor-bckg-card"]');
+    div.addEventListener('click', () => {
+      div.querySelector('input[type=color]').click();
+    })
+  }
+
+  function atualizarCoresTextosBCKG(cor){
+    const div = document.querySelector('[data-acao="selecao-cor-bckg-card"]');
+
+    try{
+      div.querySelector('span.cor-selecionada--span').style.color = cor;
+      div.querySelector('label.label-input-cor-selecionada').style.color = cor;
+    }catch(erro){
+
+    }
+  }
+
   function atualizarCores(input){
     //Atualiza a cor do ícone (label) do input:color
     const valor = input.value.toUpperCase()
@@ -227,12 +275,15 @@ import { conteudo_music_img } from './módulos/conteudo-music-img.js';
     const datasetInputTexto = input.parentElement.querySelector('input.input-texto').dataset.input;
     
     switch(datasetInputTexto){
-      case 'verso':        
       case 'autor':
       case 'nome':
       atualizarTodosCardsGeracao(valor, datasetInputTexto, input.closest('form'), 'cores');
       break;
-      
+      case 'verso':        
+      atualizarTodosCardsGeracao(valor, datasetInputTexto, input.closest('form'), 'cores');
+      atualizarCoresTextosBCKG(valor);
+      break;
+
       default:
       console.log('Há um erro na filtragem do dataset classe para este elemento.');
       break;
@@ -246,9 +297,18 @@ import { conteudo_music_img } from './módulos/conteudo-music-img.js';
     
     switch(dataset){
       case 'verso':        
-      case 'autor':
       case 'nome':
       atualizarTodosCardsGeracao(valor, dataset, input.closest('form'), 'textos');
+      atualizarNomeArquivo();
+      break;
+      case 'autor':
+
+      if(!isEmpty(valor)){
+        atualizarTodosCardsGeracao(`${valor} - `, dataset, input.closest('form'), 'textos');
+      }else{
+        atualizarTodosCardsGeracao(`${valor}`, dataset, input.closest('form'), 'textos');
+      }
+      
       atualizarNomeArquivo();
       break;
       
@@ -300,20 +360,6 @@ import { conteudo_music_img } from './módulos/conteudo-music-img.js';
       $('#modal-preview').modal('show');
     })
   }
-
-  // const url = new URL(window.location);
-  
-  // if(url.origin !== 'http://127.0.0.1:5500'){
-
-  //   const content = `default-src 'self' 'unsafe-inline'; 
-  //   style-src 'self' 'unsafe-inline' https://fonts.gstatic.com https://cdn.jsdelivr.net/ https://fonts.googleapis.com/; 
-  //   img-src ${url.origin} blob: data:; 
-  //   font-src 'self' 'unsafe-inline' https://fonts.gstatic.com https://cdn.jsdelivr.net/ https://fonts.googleapis.com/; 
-  //   script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net/ https://code.jquery.com/ https://cdnjs.cloudflare.com/; 
-  //   `
-
-  //   document.querySelector('[data-csp]').setAttribute('content', content);
-  // }
 
   atualizarDatas();
   escutaClickInteracaoModalCompartilha();

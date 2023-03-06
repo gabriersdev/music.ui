@@ -1,0 +1,56 @@
+/* Mains de passos/estados do Music.img */
+.music-img{
+  background: var(--bckg-music-img);
+}
+
+.music-img .descricao-titulo-app{
+  color: var(--cor-txt-descricao-titulo-app);
+}
+
+.music-img .botao{
+  background-color: var(--bckg-botao-music-img);
+  color: var(--cor-txt-botao-music-img);
+}
+
+.music-img .titulo-secao,
+.music-img .titulo-destaque{
+  color: var(--cor-titulo-secao);
+}
+
+.music-img .input-grupo{
+  background-color: var(--bckg-input);
+}
+
+.music-img .input-texto{
+  border: 3.5px solid var(--border-input);
+}
+
+.music-img .input-texto::placeholder{
+  color: var(--txt-placeholder-input);
+}
+
+.music-img .input-texto:focus{
+  border-color: var(--border-input-focus);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus{
+  /* -webkit-text-fill-color: initial; */
+  /* -webkit-box-shadow: 0 0 0px 1000px var(--bckg-input) inset; */
+}
+
+.music-img .div-grupo{
+  border-bottom: 1px dashed var(--cor-borda-div-grupo);
+}
+
+/* Exemplo de apresentação */
+main.music-img .exemplo-apresentacao{
+  background: url(../../../img/background/bckg-card-exemplo-music-img.png) center / cover no-repeat;
+  position: relative;
+}
+
+main.music-img .exemplo-apresentacao .card{
+  background: url(../../../img/background/bckg-card-exemplo-music-img.png) center / cover no-repeat;
+  /* backdrop-filter: blur(0px); */
+}
