@@ -53,6 +53,7 @@ import { conteudo_music_txt } from './módulos/conteudo-music-txt.js';
 
     escutaClickBotaoPreview();
     controleFechamentoModal();
+    trocarInfosModalCompartilhe('music.img')
   }
 
   function acionarFuncoesMusicTXT(){
@@ -61,13 +62,41 @@ import { conteudo_music_txt } from './módulos/conteudo-music-txt.js';
     
     escutaEventoFormularios();
     escutaClickBotaoBaixar();
-
+    
     escutaClickBotoesProximaSecao();
-
+    
     escutaClickBotaoPreview();
     controleFechamentoModal();
-
+    
     escutaClickSelecaoCorBCKG();
+    trocarInfosModalCompartilhe('music.txt')
+  }
+
+  function trocarInfosModalCompartilhe(nome_app){
+    let link = null;
+
+    switch(nome_app.toLowerCase().trim()){
+      case 'music.img':
+      link = 'https://gabrieszin.github.io/music-ui/img';
+      break;
+      
+      case 'music.txt':
+      link = 'https://gabrieszin.github.io/music-ui/txt';
+      break;
+
+      default:
+      console.log('BRUH');
+      break;
+    }
+
+    try{
+      const modal = document.querySelector('div#modal-compartilha');
+      modal.querySelector('div.modal-body').querySelector('b').textContent = nome_app.toLowerCase().trim();
+      modal.querySelector('input#link-compartilhamento').value = link.toLowerCase().trim();
+
+    }catch(error){
+      console.log('Ocorreu um erro', error);
+    }
   }
 
   function escutaClickBotoesProximaSecao(){
