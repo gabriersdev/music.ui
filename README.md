@@ -2,7 +2,7 @@
 
 Music.ui é um projeto que permite aos usuários criar cards com versos de suas músicas favoritas. 
 
-Você pode [acessar o music.ui aqui][musicUI] ou ver o [protótipo na Behance][prototipo]
+Você pode [acessar o music.ui aqui][musicUI] ou ver o [protótipo na Behance aqui][prototipo-img] e [aqui][prototipo-txt]
 
 ## Funcionalidades
 
@@ -20,7 +20,8 @@ Você pode [acessar o music.ui aqui][musicUI] ou ver o [protótipo na Behance][p
 - [Google Fonts][fonts_google] (fontes usadas: Inter, Inter Tight e Sora)
 
 [musicUI]:https://github.com/gabrieszin/music.ui
-[prototipo]:https://www.behance.net/
+[prototipo-img]:https://www.behance.net/gallery/165339249/musicimg
+[prototipo-txt]:https://www.behance.net/gallery/165338959/musictxt
 [html2canvas]:https://html2canvas.hertzen.com
 [bootstrap_icons]:https://icons.getbootstrap.com
 [bootstrap]:https://getbootstrap.com
