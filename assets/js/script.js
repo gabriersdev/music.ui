@@ -58,8 +58,7 @@ import { conteudo_music_txt } from './módulos/conteudo-music-txt.js';
   function acionarFuncoesMusicTXT(){
     controlarMainPrincipal('hide');
     carregarConteudosAPP(conteudo_music_txt);
-
-
+    
     escutaEventoFormularios();
     escutaClickBotaoBaixar();
 

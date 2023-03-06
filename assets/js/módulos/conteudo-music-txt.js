@@ -25,11 +25,10 @@ Na internet ele é barril, na vida real ele é quieto
 </section>
 </main>
 
-<main class="main music-txt" data-conteudo="secao-1">
+<main class="main music-txt none" data-conteudo="secao-1">
 <section class="esquerda dados-geracao-card">
 
 <form action="#" method="POST" class="formulario">
-
 <div>
 <h2 class="titulo-secao">
 Passo 1 de 2
@@ -94,7 +93,7 @@ O verso da música aparecerá aqui
 </section>
 </main>
 
-<main class="main music-txt" data-conteudo="secao-2">
+<main class="main music-txt none" data-conteudo="secao-2">
 <section class="esquerda dados-geracao-card">
 
 <form action="#" method="POST" class="formulario">
@@ -135,7 +134,7 @@ O verso da música aparecerá aqui
 </section>
 </main>
 
-<main class="main music-txt" data-conteudo="secao-encerramento">
+<main class="main music-txt none" data-conteudo="secao-encerramento">
 <section class="esquerda dados-geracao-card">
 
 <div>
@@ -146,7 +145,7 @@ Tudo certo :)
 <div class="div-grupo">
 <div class="label" for="">
 <span class="label-principal" data-info="nome-apresentacao">Card</span>
-<span class="label-informacoes">Tamanho aproximado: <span data-info="tamanho-arquivo">Undefined</span></span>
+<span class="label-informacoes">Tamanho aproximado: <span data-info="tamanho-arquivo">0.95MB</span></span>
 </div>
 <a href="" download="download.png" data-acao="download-capture"></a>
 <button type="button" class="botao botao-baixar">Baixar <i class="bi bi-arrow-down-square"></i></button>
