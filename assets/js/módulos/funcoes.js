@@ -62,11 +62,11 @@ function trocarInfosModalCompartilhe(nome_app){
 
   switch(nome_app.toLowerCase().trim()){
     case 'music.img':
-    link = 'https://gabrieszin.github.io/music-ui/img';
+    link = 'https://gabrieszin.github.io/music.ui/img';
     break;
     
     case 'music.txt':
-    link = 'https://gabrieszin.github.io/music-ui/txt';
+    link = 'https://gabrieszin.github.io/music.ui/txt';
     break;
 
     default:
@@ -376,5 +376,7 @@ function escutaClickBotaoPreview(){
 }
 
 export{
-  escutaSelecaoAPP
+  escutaSelecaoAPP,
+  acionarFuncoesMusicIMG,
+  acionarFuncoesMusicTXT
 }

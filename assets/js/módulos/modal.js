@@ -1,10 +1,14 @@
 function escutaClickInteracaoModalCompartilha(){
-  document.querySelector('#link-compartilhamento').onclick = () => {
-    copiarLinkAT();
-  }
-  
-  document.querySelector('#button-addon-link-copy').onclick = () => {
-    copiarLinkAT();
+  try{
+    document.querySelector('#link-compartilhamento').onclick = () => {
+      copiarLinkAT();
+    }
+    
+    document.querySelector('#button-addon-link-copy').onclick = () => {
+      copiarLinkAT();
+    }
+  }catch(error){
+    
   }
 }
 
