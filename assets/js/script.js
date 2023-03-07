@@ -41,3 +41,16 @@ import { acionarFuncoesMusicIMG, acionarFuncoesMusicTXT, escutaSelecaoAPP } from
   escutaClickInteracaoModalCompartilha();
   controleFechamentoModal();
 })();
+
+(() => {
+  window.onbeforeunload = (evento) => {
+    const inputs = document.querySelectorAll('.input-texto');
+    if(!isEmpty(inputs)){
+      inputs.forEach(input => {
+        if(!isEmpty(input.value)){
+          evento.returnValue = 'Tem certeza que deseja sair? Os seus dados serão perdidos';
+        }
+      })
+    }
+  }
+})();
