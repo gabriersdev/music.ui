@@ -50,7 +50,7 @@
 }
 
 .card--informacoes{
-  color: #FFF;
+  color: var(--cor-txt-informacoes);
   text-shadow: 0px 0px 4px var(--txt-shadow-card-info);
   /* z-index: 2; */
   width: calc(inherit - 1.5rem);

@@ -1,16 +1,5 @@
 :root{
-  --preto: #000;
-  --cinza: #6C757D;
-  --branco: #FFF;
-  --vermelho: #E8A0A0;
-  --amarelo: #E99F3F;
-  --verde: #87D1CA;
-  --verde-agua: #32CCBC;
-  --verde-claro: #80DA80;
-  --verde-medio: #1F8378;
-  --verde-escuro: #145049;
-  --roxo-azul: #3632BB;
-
+  --fonte-padrao: 'Inter', sans-serif;
   --fonte-titulo-app: 'Sora', 'Inter', sans-serif;
   --size-titulo-app: 3.75rem;
 
@@ -47,9 +36,11 @@
   --height-formulario: 90%;
   --size-txt-descricao-titulo: 2rem;
   --size-txt-label-principal: 1.25rem;
+  --cor-borda-secoes: var(--preto-05);
+  --bckg-exemplo-gerando-card: var(--preto-20);
 
   /* Feedback Upload */
-  --border-feedback-upload: rgba(0, 0, 0, 0.25);
+  --border-feedback-upload: var(--preto-25);
   --cor-txt-destaque: var(--verde-escuro);
 
   /* Divisor */
@@ -57,31 +48,41 @@
   --divisor-linear: linear-gradient(130deg, var(--verde) 10%, var(--verde-agua) 100%);
 
   /* Card */
+  --cor-txt-informacoes: var(--branco);
   --bckg-card: #00000033;
   --height-card: 600px;
   --width-card: 500px;
-  --cor-logo-app: rgba(0, 0, 0, 0.5);
-  --txt-shadow-card-info: rgba(0, 0, 0, 0.5);
+  --cor-logo-app: var(--preto-05);
+  --txt-shadow-card-info: var(--preto-05);
   --espaco-info-card: 1.5rem;
   --size-txt-versos: 2.5rem;
   --size-txt-autoria: 1.5rem;
-  --bckg-versos: rgba(255, 255, 255, 0.1);
+  --bckg-versos: var(--branco-10);
 
   /* Music IMG */
   /* --bckg-music-img: linear-gradient(153.69deg, #90F7EC80 0%, #32CCBC80 100%); */
-  --bckg-music-img: #90F7EC80;
+  --bckg-music-img: var(--verde-agua-escuro);
 
   /* Music TXT */
-  --bckg-music-txt: #ABDCFF;
-  --cor-txt-descricao-titulo-app-music-txt: #007DD6;
-  --bckg-botao-music-txt:#7FBEEC;
-  --cor-txt-botao-music-txt: #004F87;
-  --cor-titulo-secao-music-txt: #004F87;
-  --bckg-input-music-txt: #7FBEEC;
-  --border-input-music-txt: #7FBEEC;
-  --txt-placeholder-input-music-txt: #004F87;
+  --bckg-music-txt: var(--azul);
+  --cor-txt-descricao-titulo-app-music-txt: var(--azul-medio);
+  --bckg-botao-music-txt: var(--azul-2);
+  --cor-txt-botao-music-txt: var(--azul-escuro);
+  --cor-titulo-secao-music-txt: var(--azul-escuro);
+  --bckg-input-music-txt:  var(--azul-2);
+  --border-input-music-txt:  var(--azul-2);
+  --txt-placeholder-input-music-txt: var(--azul-escuro);
   --border-input-focus-music-txt: #6FAEDB;
-  --cor-borda-div-grupo-music-txt: #004F87;
+  --cor-borda-div-grupo-music-txt: var(--azul-escuro);
+
+  /* Botão preview */
+  --bckg-botao-preview: var(--preto-10);
+  --cor-borda-botao-preview: var(--preto-10);
+  --txt-botao-preview: var(--cinza-medio);
+
+  /* Tooltip */
+  --bckg-tooltip: var(--branco);
+  --txt-tooltip: var(--preto);
 }
 
 @media screen and (max-width: 1240px) {

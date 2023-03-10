@@ -1,6 +1,6 @@
 .custom-tooltip{
-  --bs-tooltip-bg: #FFF !important;
-  --bs-tooltip-color: #000 !important;
+  --bs-tooltip-bg: var(--bckg-tooltip) !important;
+  --bs-tooltip-color: var(--txt-tooltip) !important;
   --bs-tooltip-opacity: 1;
   --bs-tooltip-margin: 1rem;
 }

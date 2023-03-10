@@ -16,7 +16,7 @@
   line-height: normal;
   width: 50%;
   padding: var(--padding-secoes);
-  border-top: 1px dashed rgba(0, 0, 0, 0.5);
+  border-top: 1px dashed var(--cor-borda-secoes);
 }
 
 .esquerda.informacoes-apresentacao,
@@ -100,15 +100,15 @@
 
 .botao:focus,
 .botao:hover{
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  box-shadow:  0px 0px 0px 5px rgba(0, 0, 0, 0.1);
-  -webkit-box-shadow: 0px 0px 0px 5px rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 0px 0px 0px 5px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--preto-10);
+  box-shadow:  0px 0px 0px 5px var(--preto-10);
+  -webkit-box-shadow: 0px 0px 0px 5px var(--preto-10);
+  -moz-box-shadow: 0px 0px 0px 5px var(--preto-10);
 }
 
 .exemplo-apresentacao, 
 .gerando-card{
-  background: rgba(0, 0, 0, 0.2);
+  background: var(--bckg-exemplo-gerando-card);
   display: flex;
   align-items: center;
   justify-content: center;
