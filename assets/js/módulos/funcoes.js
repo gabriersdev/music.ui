@@ -66,7 +66,7 @@ function trocarInfosModalCompartilhe(nome_app){
     break;
     
     case 'music.txt':
-    link = 'https://gabrieszin.github.io/music.ui/txt';
+    link = 'https://gabrieszin.github.io/music. ui/txt';
     break;
 
     default:

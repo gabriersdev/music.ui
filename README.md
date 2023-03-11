@@ -7,9 +7,20 @@ Você pode [acessar o music.ui aqui][musicUI] ou ver o [protótipo na Behance aq
 ## Funcionalidades
 
 - **Controlar exibição de seções e carragemento de aplicação** <br>
+  Conforme o usuário vai preenchendo os formulários corretamente, as seções passam a serem exibidas.
+
 - **Monitorar preenchimento de textos pelos usuários** <br>
+  Os textos de versos, nome do autor e nome da música são atualizados de acordo com o usuário vai escrevendo. Um evento `input` de escuta faz essa verificação em todos os `<input>` da página.
+
 - **Upload de imagem e uso da imagem na aplicação** <br>
+  Quando uma imagem é enviada, a função `escutaUploadImagem()` instancia um novo `FileReader`. Através da função `readAsDataURL()`, a imagem enviada é passada como argumento e permite ser renderezida quando o carregamento da imagem estiver concluído. <br> A renderização é aplicada na tag `<img>` dos cards.
+
 - **Gerar PNG através de um card** <br>
+  A ferramenta `html2canvas` tem a capacidade de renderizar uma imagem a partir de um elemento HTML. No Music.ui, o `html2canvas` transforma o card criado pelo usuário em imagem do tipo PNG.
+
+- **Baixar PNG gerado** <br>
+  O botão "Baixar", na última seção do projeto, aciona a função `escutaClickBotaoBaixar()` que renderiza o card para um PNG através do `html2canvas` e depois aciona o click em uma tag `<a>` para baixar.
+
 
 ## Ferramentas
 
