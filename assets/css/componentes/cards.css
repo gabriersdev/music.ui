@@ -84,6 +84,12 @@
   content: "";
 }
 
+#modal-preview .modal-body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 @media screen and (max-width: 625px) {
   section.card-final{
     padding: 1rem;

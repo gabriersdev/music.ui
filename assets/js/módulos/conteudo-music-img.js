@@ -42,7 +42,7 @@ Passo 1 de 2
 <span class="label-informacoes">Texto obrigatório. Até 50 caracteres.</span>
 </label>
 <div class="input-grupo">
-<input placeholder="Verso da música" type="text" class="input-texto" data-input="verso" name="input-texto-verso" id="input-texto-verso" required maxlength="50">
+<input placeholder="Verso da música" type="text" class="input-texto" data-input="verso" name="input-texto-verso" id="input-texto-verso" required maxlength="49">
 </div>
 
 <label for="input-color-1" class="label-input-color"><i class="bi bi-palette-fill"></i></label>
@@ -55,7 +55,7 @@ Passo 1 de 2
 <span class="label-informacoes">Texto opcional. Até 20 caracteres.</span>
 </label>
 <div class="input-grupo">
-<input placeholder="Autor da música" type="text" class="input-texto" data-input="autor" name="input-texto-autor" id="input-texto-autor" maxlength="20">
+<input placeholder="Autor da música" type="text" class="input-texto" data-input="autor" name="input-texto-autor" id="input-texto-autor" maxlength="19">
 </div>
 
 <label for="input-color-2" class="label-input-color"><i class="bi bi-palette-fill"></i></label>
@@ -68,7 +68,7 @@ Passo 1 de 2
 <span class="label-informacoes">Texto opcional. Até 20 caracteres.</span>
 </label>
 <div class="input-grupo">
-<input placeholder="Nome da música" type="text" class="input-texto" data-input="nome" name="" id="" maxlength="20">
+<input placeholder="Nome da música" type="text" class="input-texto" data-input="nome" name="" id="" maxlength="19">
 </div>
 
 <label for="input-color-3" class="label-input-color"><i class="bi bi-palette-fill"></i></label>
