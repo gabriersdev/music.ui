@@ -30,7 +30,7 @@ Você pode [acessar o music.ui aqui][musicUI] ou ver o [protótipo na Behance aq
 - [jQuery - versão 3.6.3][jQuery]
 - [Google Fonts][fonts_google] (fontes usadas: Inter, Inter Tight e Sora)
 
-[musicUI]:https://github.com/gabrieszin/music.ui
+[musicUI]:https://github.com/gabriersdev/music.ui
 [prototipo-img]:https://www.behance.net/gallery/165339249/musicimg
 [prototipo-txt]:https://www.behance.net/gallery/165338959/musictxt
 [html2canvas]:https://html2canvas.hertzen.com
